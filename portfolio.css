@@ -1,0 +1,227 @@
+* {
+  margin: 0px;
+  background-color: #232323;
+  color: #d9d9d9;
+  line-height: normal;
+  letter-spacing: 1px;
+}
+.hover-item {
+  color: #d9d9d9;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 140px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  transition: top 0.3s; /* Smooth transition for hiding/showing */
+  background-color: transparent;
+  font-family: "neue-haas-grotesk-display", sans-serif;
+  font-size: 20px;
+}
+
+.hidden {
+  top: -140px; /* Moves the navigation bar off-screen when hidden */
+}
+a {
+  background-color: transparent;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 270px;
+  margin-right: 10vw;
+  animation: moveleft;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+  background-color: transparent;
+}
+.nav-left {
+  margin-left: 10vw;
+  display: flex;
+  align-items: center;
+  animation: moveright;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+  background-color: transparent;
+}
+.logga {
+  width: 60px;
+  background-color: transparent;
+}
+h2 {
+  font-weight: 500;
+  font-family: "neue-haas-grotesk-display", sans-serif;
+  font-style: normal;
+}
+.rubrik {
+  display: grid;
+  align-items: center;
+  font-family: "neue-haas-grotesk-display", sans-serif;
+  font-style: normal;
+  font-size: 33px;
+
+  margin-bottom: 20px;
+}
+.case-text {
+  display: grid;
+  align-items: center;
+  font-family: "neue-haas-grotesk-display", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 18px;
+  max-width: 600px;
+  font-weight: 200;
+  padding-bottom: 100px;
+}
+.footer {
+  grid-area: footer;
+}
+.main {
+  margin: 5vw;
+  display: grid;
+  grid-area: main;
+  grid-template-columns: repeat(2, minmax(min-content, 850px));
+  column-gap: 1.5%;
+  row-gap: 0%;
+  justify-content: center;
+  margin-top: 200px;
+}
+
+.pcontent {
+  aspect-ratio: 6 / 5;
+  cursor: pointer;
+  font-family: "neue-haas-grotesk-display", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  display: flex;
+  flex-direction: column;
+}
+.empty-div {
+  height: 0;
+  padding: -2vh;
+}
+
+.thumbnail {
+  background-color: rgb(0, 130, 243);
+  height: 67%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.text-container {
+  width: 100%;
+  height: 12%;
+  display: flex;
+  flex-direction: column;
+}
+.upper-text {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: row;
+  font-size: 16px;
+  font-weight: 200;
+}
+.left-text {
+  width: 65%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.right-text {
+  display: flex;
+  width: 35%;
+  justify-content: center;
+  align-items: center;
+}
+.lower-text {
+  width: 100%;
+  height: 50%;
+  font-size: 18px;
+  display: flex;
+  align-items: end;
+}
+.thumbnail-image {
+  width: 100%;
+}
+.header {
+  grid-area: header;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: ". edvin . menu menu .";
+  box-shadow: 2px 2px 10px 2px rgba(2, 2, 2, 0.3);
+}
+.menu {
+  grid-area: menu;
+  display: flex;
+  justify-content: space-around;
+  height: 100%;
+  align-items: center;
+  font-weight: bolder;
+}
+.Edvin {
+  grid-area: edvin;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  font-family: "FTP";
+}
+
+#learn {
+  color: black;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.rubrik2 {
+  grid-area: rubrik2;
+}
+.img {
+  display: grid;
+  grid-area: img;
+  height: 60vh;
+  margin-top: -200px;
+}
+.des {
+  grid-area: des;
+  display: grid;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+a:hover {
+  color: rgb(100, 100, 100);
+}
+a:active {
+  color: rgb(255, 255, 255);
+}
+
+@media (max-width: 1000px) {
+  .main {
+    margin: 3vw;
+    margin-top: 200px;
+    display: grid;
+    grid-area: main;
+    grid-template-columns: repeat(1, minmax(min-content, 750px));
+    column-gap: 1.5%;
+    row-gap: 2%;
+    justify-content: center;
+  }
+}
