@@ -13,6 +13,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const menu = document.querySelector(".menu");
   const menuButton = document.getElementById("hover-item");
   const closeButton = document.getElementById("close-button");
+  const links = document.querySelectorAll("a.delayed-link");
+  let contents = document.querySelectorAll(".disapear");
 
   if (!navigation) {
     console.error("Navigation element not found!");
@@ -60,10 +62,10 @@ document.addEventListener("DOMContentLoaded", () => {
       navigation.classList.add("hide");
       isHidden = true;
     }
-    if (isElementInViewport(indexDescription)) {
+    if (isHalfElementInViewport(indexDescription)) {
       indexDescription.classList.add("scrolled");
     }
-    if (isElementInViewport(h21) && !h21.classList.contains("scrolled")) {
+    if (isHalfElementInViewport(h21) && !h21.classList.contains("scrolled")) {
       h21.classList.add("scrolled");
 
       h21.addEventListener(
@@ -74,7 +76,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
           setTimeout(() => {
             h22.classList.add("scrolled");
-          }, h21Duration / 2);
+          }, h21Duration / 4);
 
           h22.addEventListener(
             "animationstart",
@@ -149,12 +151,37 @@ document.addEventListener("DOMContentLoaded", () => {
 
   menuButton.addEventListener("click", () => {
     menu.classList.add("open");
+    menu.classList.remove("close");
+    menuButton.classList.add("remove");
+    menuButton.classList.remove("add");
   });
 
   closeButton.addEventListener("click", () => {
     menu.classList.remove("open");
     menu.classList.add("close");
-    console.log("poasdasd");
+    menuButton.classList.add("add");
+    menuButton.classList.remove("remove");
   });
-  window.addEventListener("scroll", handleScroll);
+  links.forEach((link) => {
+    link.addEventListener("click", function (event) {
+      event.preventDefault(); // Prevent the default behavior of the link
+
+      const targetUrl = this.getAttribute("href"); // Get the URL to navigate to
+      if (menu.classList.contains("open")) {
+        menu.classList.add("close");
+        menuButton.classList.add("add");
+        menuButton.classList.remove("remove");
+      }
+      if (navigation.classList.contains("hide")) {
+        navigation.classList.add("show");
+      }
+      contents.forEach((content) => {
+        content.classList.add("fade");
+      });
+
+      setTimeout(() => {
+        window.location.href = targetUrl; // Navigate to the target URL after the animation
+      }, 500); // Adjust the delay to match your animation duration (in milliseconds)
+    });
+  });
 });

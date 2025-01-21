@@ -10,6 +10,13 @@
 html {
   background: #f0f0f0;
 }
+.disapear {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+.disapear.fade {
+  opacity: 0;
+}
 
 .menu {
   z-index: 1001;
@@ -32,22 +39,83 @@ html {
   justify-content: space-between;
 }
 .menu.open {
-  transform: translateX(0);
-  transition: transform 0.5s ease-in;
+  animation: menu-open 0.5s ease-in-out forwards;
 }
 .menu.close {
-  transition: transform 0.5s ease-in;
+  animation: menu-close 0.5s ease-in-out forwards;
+}
+#hover-item {
+  cursor: pointer;
+}
+#hover-item.remove {
+  animation: remove-menu 0.2s ease-in forwards;
 }
 
+#hover-item.add {
+  animation: add-menu 0.2s ease-in forwards;
+}
+
+@keyframes remove-menu {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes add-menu {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes menu-open {
+  0% {
+    transform: translateX(56vw);
+  }
+  1% {
+    transform: translateX(33vw);
+  }
+
+  80% {
+    transform: translateX(-4px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes menu-close {
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-4px);
+  }
+  99% {
+    transform: translateX(33vw);
+  }
+  100% {
+    transform: translateX(56vw);
+  }
+}
 .close-wrapper {
   width: 100%;
   display: flex;
   justify-content: flex-end;
 }
+#close-button {
+  cursor: pointer;
+}
 .menu-links h3 {
   font-size: 3.5vw;
   font-weight: 600;
   color: #232323;
+  cursor: pointer;
 }
 .menu-links {
   display: flex;
@@ -58,6 +126,7 @@ html {
   gap: 5px;
   padding-top: 130px;
 }
+
 .bottom-menu {
   display: flex;
   justify-content: space-between;
@@ -68,12 +137,12 @@ html {
   font-size: 14px;
   font-weight: 500;
 }
-.bottom-menu img {
-  height: 20px;
-  width: auto;
+
+#menu-icon {
+  height: 30px;
 }
 .navigation {
-  position: fixed; /* Keep it fixed at the top */
+  position: fixed;
   top: 0;
   left: 0;
   height: 100px;
@@ -92,21 +161,20 @@ html {
   animation: movedown;
   animation-duration: 1s;
   animation-timing-function: ease-out;
+  backdrop-filter: blur(2px);
 }
 
-/* Hide navigation when scrolling down */
 .navigation.hide {
-  transform: translateY(-100%); /* Move out of view */
+  transform: translateY(-100%);
   opacity: 0;
 }
 
-/* Show navigation when scrolling up */
 .navigation.show {
-  transform: translateY(0); /* Reset to default position */
+  transform: translateY(0);
   opacity: 1;
 }
 #container {
-  display: none; /* Hidden initially */
+  display: none;
   opacity: 0;
 }
 #video-overlay {
@@ -146,14 +214,6 @@ html {
   background-color: none;
 }
 
-.hero {
-  position: relative;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  overflow: hidden;
-}
-
 a {
   color: #232323;
   text-decoration: none;
@@ -174,6 +234,13 @@ a {
     opacity: 100%;
   }
 }
+.hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
 
 #heroland {
   width: 100%;
@@ -191,7 +258,7 @@ a {
 #word-container {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: fit-content;
   line-height: 250%;
 }
 .word {
@@ -226,7 +293,7 @@ a {
   height: 3px;
   background-color: #232323;
   position: relative;
-  animation: arrowMoveRight 0.8s ease-out forwards; /* Initial animation */
+  animation: arrowMoveRight 0.8s ease-out forwards;
 }
 
 .arrow::before,
@@ -241,14 +308,13 @@ a {
 }
 
 .arrow::before {
-  transform: translateX(0); /* Initial transform */
+  transform: translateX(0);
 }
 
 .arrow::after {
-  transform: translateX(0); /* Initial transform */
+  transform: translateX(0);
 }
 
-/* Keyframes for arrow movement */
 @keyframes arrowMoveRight {
   50% {
     transform: translateX(0);
@@ -439,7 +505,7 @@ a {
 }
 @keyframes scrollanimationsingle {
   0% {
-    transform: translateY(100px);
+    transform: translateY(50px);
     opacity: 0;
   }
   50% {
@@ -501,36 +567,22 @@ a {
   justify-content: space-between;
   overflow: hidden; /* Prevent overflow for images */
   cursor: pointer;
-}
-#herocard1 {
   opacity: 0;
 }
-#herocard2 {
-  opacity: 0;
+
+.herocard.scrolled {
+  animation: cardanimation1 0.8s ease-out forwards;
 }
-#herocard3 {
-  opacity: 0;
-}
-#herocard1.scrolled {
-  animation: cardanimation1 1s ease-out forwards;
-}
-#herocard2.scrolled {
-  animation: cardanimation1 1s ease-out forwards;
-}
-#herocard3.scrolled {
-  animation: cardanimation1 1s ease-out forwards;
-}
+
 @keyframes cardanimation1 {
   0% {
-    transform: translateY(40px);
-    opacity: 0;
+    transform: translateY(50px);
+    opacity: 0%;
   }
-  50% {
-    opacity: 1;
-  }
+
   100% {
     transform: translateY(0px);
-    opacity: 1;
+    opacity: 100%;
   }
 }
 
@@ -603,7 +655,7 @@ a {
   height: 3px;
   background-color: #232323;
   position: relative;
-  animation: arrowMoveRight 0.8s ease-out forwards; /* Initial animation */
+  animation: arrowMoveRight 0.8s ease-out forwards;
 }
 
 .small-arrow::before,
@@ -650,7 +702,7 @@ a {
   cursor: pointer;
   height: 45px;
   border-radius: 30px;
-  background-color: #232323;
+  background-color: #3064ce;
   display: flex;
   justify-content: center;
   align-items: center;
