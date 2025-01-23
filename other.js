@@ -20,26 +20,24 @@ document.addEventListener("DOMContentLoaded", () => {
     const elementHeight = rect.height;
 
     return (
-      rect.top + elementHeight * 0.1 >= 0 && // 1% of the element's height is in view from the top
-      rect.top <= (window.innerHeight || document.documentElement.clientHeight) // The top of the card is within the viewport's height
+      rect.top + elementHeight * 0.1 >= 0 &&
+      rect.top <= (window.innerHeight || document.documentElement.clientHeight)
     );
   };
 
   const addScrolledClass = () => {
-    let baseDelay = 0; // Initial delay between cards in the viewport
+    let baseDelay = 0;
 
     herocards.forEach((card) => {
       if (isInViewport(card) && !card.classList.contains("scrolled")) {
-        // Calculate delay based on the card's horizontal position (left value)
         const rect = card.getBoundingClientRect();
-        const delay = baseDelay + rect.left * 0.01; // Delay based on horizontal position
+        const delay = baseDelay + rect.left * 0.01;
 
-        // Add the scrolled class with the calculated delay
         setTimeout(() => {
           card.classList.add("scrolled");
         }, delay);
 
-        baseDelay += Math.random(300); // Increment delay between rows
+        baseDelay += Math.random(300);
       }
     });
   };
@@ -81,9 +79,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   links.forEach((link) => {
     link.addEventListener("click", function (event) {
-      event.preventDefault(); // Prevent the default behavior of the link
+      event.preventDefault();
 
-      const targetUrl = this.getAttribute("href"); // Get the URL to navigate to
+      const targetUrl = this.getAttribute("href");
       if (menu.classList.contains("open")) {
         menu.classList.add("close");
         menuButton.classList.add("add");
@@ -97,8 +95,8 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
       setTimeout(() => {
-        window.location.href = targetUrl; // Navigate to the target URL after the animation
-      }, 500); // Adjust the delay to match your animation duration (in milliseconds)
+        window.location.href = targetUrl;
+      }, 500);
     });
   });
 });

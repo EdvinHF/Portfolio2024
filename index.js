@@ -164,9 +164,9 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   links.forEach((link) => {
     link.addEventListener("click", function (event) {
-      event.preventDefault(); // Prevent the default behavior of the link
+      event.preventDefault();
 
-      const targetUrl = this.getAttribute("href"); // Get the URL to navigate to
+      const targetUrl = this.getAttribute("href");
       if (menu.classList.contains("open")) {
         menu.classList.add("close");
         menuButton.classList.add("add");
@@ -180,8 +180,8 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
       setTimeout(() => {
-        window.location.href = targetUrl; // Navigate to the target URL after the animation
-      }, 500); // Adjust the delay to match your animation duration (in milliseconds)
+        window.location.href = targetUrl;
+      }, 500);
     });
   });
 });

@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; /* Apply border-box to all elements */
+  box-sizing: border-box;
   font-family: "neue-haas-grotesk-display", sans-serif;
 
   font-size: 15px;
@@ -156,8 +156,8 @@ html {
   font-weight: 100;
   background-color: #f0f0f050;
   transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-  transform: translateY(0); /* Default position */
-  z-index: 1000; /* Ensure it appears above other elements */
+  transform: translateY(0);
+  z-index: 1000;
   animation: movedown;
   animation-duration: 1s;
   animation-timing-function: ease-out;
@@ -191,7 +191,7 @@ html {
 }
 
 #intro-video {
-  width: 40%;
+  width: auto;
   height: 40%;
 }
 @keyframes fadeOut {
@@ -326,24 +326,22 @@ a {
   }
 }
 
-/* Hover interaction */
 .arrow-text:hover .arrow {
-  animation: arrowMoveRight 0.8s ease-out forwards; /* Animate arrow movement */
+  animation: arrowMoveRight 0.8s ease-out forwards;
 }
 
 .arrow-text:hover .arrow::before {
-  transform: translate(18px, 4.3px) rotate(-45deg); /* Arrowhead transform */
-  opacity: 1; /* Show arrowhead */
+  transform: translate(18px, 4.3px) rotate(-45deg);
+  opacity: 1;
 }
 
 .arrow-text:hover .arrow::after {
-  transform: translate(18px, -4.3px) rotate(45deg); /* Arrowhead transform */
-  opacity: 1; /* Show arrowhead */
+  transform: translate(18px, -4.3px) rotate(45deg);
+  opacity: 1;
 }
 
-/* Reverse animation when hover ends */
 .arrow-text:not(:hover) .arrow {
-  animation: arrowMoveLeft 0.8s ease-out forwards; /* Reverse animation */
+  animation: arrowMoveLeft 0.8s ease-out forwards;
 }
 
 @keyframes arrowMoveLeft {
@@ -456,7 +454,7 @@ a {
 }
 .h21.scrolled {
   animation: h2animation1 0.5s ease-out forwards;
-  opacity: 0.5; /* Ensure it becomes fully visible */
+  opacity: 0.5;
 }
 .h22 {
   color: #232323;
@@ -467,7 +465,7 @@ a {
 }
 .h22.scrolled {
   animation: h2animation1 0.3s ease-out forwards;
-  opacity: 0.5; /* Ensure it becomes fully visible */
+  opacity: 0.5;
 }
 .h23 {
   color: #232323;
@@ -478,7 +476,7 @@ a {
 }
 .h23.scrolled {
   animation: h2animation1 0.5s ease-out forwards;
-  opacity: 0.5; /* Ensure it becomes fully visible */
+  opacity: 0.5;
 }
 @keyframes h2animation1 {
   0% {
@@ -501,7 +499,7 @@ a {
 }
 #index-description.scrolled {
   animation: scrollanimationsingle 1s ease-out forwards;
-  opacity: 0.5; /* Ensure it becomes fully visible */
+  opacity: 0.5;
 }
 @keyframes scrollanimationsingle {
   0% {
@@ -562,10 +560,10 @@ a {
   stroke-width: 1px;
   max-height: max-content;
   height: fit-content;
-  display: flex; /* Flex container for alignment */
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
-  overflow: hidden; /* Prevent overflow for images */
+  overflow: hidden;
   cursor: pointer;
   opacity: 0;
 }
@@ -588,16 +586,16 @@ a {
 
 .thumbnail {
   width: 100%;
-  aspect-ratio: 3 / 2; /* Maintain a proportional aspect ratio */
+  aspect-ratio: 3 / 2;
   overflow: hidden;
-  position: relative; /* Ensure the image fills the container */
+  position: relative;
 }
 
 .thumbnail-img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Scale the image proportionally and fill the container */
-  object-position: center; /* Center the image within the container */
+  object-fit: cover;
+  object-position: center;
   display: block;
   transition: transform 0.5s;
 }
@@ -669,24 +667,22 @@ a {
   transition: transform 0.5s ease-out, opacity 0.5s ease-out;
 }
 
-/* Hover interaction */
 .herocard:hover .small-arrow {
-  animation: arrowMoveRight 0.8s ease-out forwards; /* Animate arrow movement */
+  animation: arrowMoveRight 0.8s ease-out forwards;
 }
 
 .herocard:hover .small-arrow::before {
-  transform: translate(18px, 4.3px) rotate(-45deg); /* Arrowhead transform */
-  opacity: 1; /* Show arrowhead */
+  transform: translate(18px, 4.3px) rotate(-45deg);
+  opacity: 1;
 }
 
 .herocard:hover .small-arrow::after {
-  transform: translate(18px, -4.3px) rotate(45deg); /* Arrowhead transform */
-  opacity: 1; /* Show arrowhead */
+  transform: translate(18px, -4.3px) rotate(45deg);
+  opacity: 1;
 }
 
-/* Reverse animation when hover ends */
 .herocard:not(:hover) .small-arrow {
-  animation: arrowMoveLeft 0.8s ease-out forwards; /* Reverse animation */
+  animation: arrowMoveLeft 0.8s ease-out forwards;
 }
 
 .button-container {
@@ -719,7 +715,7 @@ a {
   height: 3px;
   background-color: #dddddd;
   position: relative;
-  animation: arrowMoveRight 0.8s ease-out forwards; /* Initial animation */
+  animation: arrowMoveRight 0.8s ease-out forwards;
 }
 
 .whitearrow::before,
@@ -734,31 +730,29 @@ a {
 }
 
 .whitearrow::before {
-  transform: translateX(-10px); /* Initial transform */
+  transform: translateX(-10px);
 }
 
 .whitearrow::after {
-  transform: translateX(-10px); /* Initial transform */
+  transform: translateX(-10px);
 }
 
-/* Hover interaction */
 .button-cases:hover .whitearrow {
-  animation: arrowMoveRight 0.8s ease-out forwards; /* Animate arrow movement */
+  animation: arrowMoveRight 0.8s ease-out forwards;
 }
 
 .button-cases:hover .whitearrow::before {
-  transform: translate(2px, 4.3px) rotate(-45deg); /* Arrowhead transform */
-  opacity: 1; /* Show arrowhead */
+  transform: translate(2px, 4.3px) rotate(-45deg);
+  opacity: 1;
 }
 
 .button-cases:hover .whitearrow::after {
-  transform: translate(2px, -4px) rotate(45deg); /* Arrowhead transform */
-  opacity: 1; /* Show arrowhead */
+  transform: translate(2px, -4px) rotate(45deg);
+  opacity: 1;
 }
 
-/* Reverse animation when hover ends */
 .button-cases:not(:hover) .whitearrow {
-  animation: arrowMoveLeft 0.8s ease-out forwards; /* Reverse animation */
+  animation: arrowMoveLeft 0.8s ease-out forwards;
 }
 
 .footer {
