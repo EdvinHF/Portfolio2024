@@ -267,9 +267,10 @@ a {
   color: #232323;
 }
 .name {
-  width: 700px;
+  width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  align-items: flex-start;
   padding-top: 35vh;
 }
 #name {
@@ -518,7 +519,7 @@ a {
 #index-description {
   width: 70%;
   color: #232323;
-  font-size: 30px;
+  font-size: 28px;
   font-weight: 400;
   letter-spacing: 3px;
   line-height: 140%;
@@ -885,19 +886,42 @@ a {
     padding-left: 30px;
     padding-right: 30px;
   }
+
+  #index-description {
+    width: 90%;
+  }
 }
 @media (max-width: 900px) {
   .selected-wrapper {
-    background-color: none;
-    display: grid;
     grid-template-columns: repeat(2, minmax(50px, 1000px));
-    column-gap: 1.5%;
-    row-gap: 15px;
-    justify-content: center;
-    padding-top: 70px;
-    background-color: none;
   }
   .button-container {
     justify-content: flex-start;
+  }
+}
+@media (max-width: 800px) {
+  #name {
+    font-size: 40px;
+  }
+  #index-description {
+    font-size: 25px;
+  }
+}
+@media (max-width: 550px) {
+  .selected-wrapper {
+    grid-template-columns: repeat(1, minmax(50px, 1000px));
+  }
+  .button-container {
+    justify-content: flex-end;
+  }
+  #name {
+    font-size: 30px;
+  }
+  #index-description {
+    width: 100%;
+    font-size: 20px;
+  }
+  #index-description-link {
+    font-size: 20px;
   }
 }
