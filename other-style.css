@@ -393,6 +393,10 @@ a {
   height: 33vh;
   align-items: flex-start;
   padding-top: 75px;
+  background-color: #ffffff;
+  margin-top: 20px;
+  padding-left: 80px;
+  padding-right: 80px;
 }
 .left-center {
   width: 40%;
@@ -541,5 +545,119 @@ a {
   100% {
     transform: translateY(0px);
     opacity: 85%;
+  }
+}
+@media (max-width: 1000px) {
+  .menu {
+    width: 100%;
+    transform: translateX(100vw);
+    padding: 30px;
+  }
+  .menu-links h3 {
+    font-size: 11vw;
+  }
+
+  @keyframes menu-open {
+    0% {
+      transform: translateX(100vw);
+    }
+
+    80% {
+      transform: translateX(-4px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes menu-close {
+    0% {
+      transform: translateX(0);
+    }
+    20% {
+      transform: translateX(-4px);
+    }
+
+    100% {
+      transform: translateX(100vw);
+    }
+  }
+  .navigation {
+    padding: 30px;
+  }
+  #heroland {
+    padding-left: 30px;
+    gap: 36vh;
+  }
+  #selectedprojects {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  #index-description {
+    width: 90%;
+  }
+
+  #container {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+@media (max-width: 900px) {
+  .selected-wrapper {
+    grid-template-columns: repeat(2, minmax(50px, 1000px));
+  }
+  .button-container {
+    justify-content: flex-start;
+  }
+
+  .center-footer {
+    display: none;
+  }
+}
+@media (max-width: 800px) {
+  #name {
+    font-size: 40px;
+  }
+  #index-description {
+    font-size: 25px;
+  }
+}
+@media (max-width: 550px) {
+  .selected-wrapper {
+    grid-template-columns: repeat(1, minmax(50px, 1000px));
+  }
+  .button-container {
+    justify-content: flex-end;
+  }
+  #name {
+    font-size: 28px;
+  }
+  #index-description {
+    width: 100%;
+    font-size: 20px;
+  }
+  #index-description-link {
+    font-size: 20px;
+  }
+  .word {
+    font-size: 23px;
+    font-weight: 600;
+    color: #232323;
+  }
+  .footer {
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    height: 40vh;
+  }
+  .left-paragraph {
+    display: none;
+  }
+  .contact-icons {
+    justify-content: space-between;
   }
 }
