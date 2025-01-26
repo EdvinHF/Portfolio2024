@@ -394,7 +394,7 @@ a {
   align-items: flex-start;
   padding-top: 75px;
   background-color: #ffffff;
-  margin-top: 20px;
+  margin-top: 70px;
   padding-left: 80px;
   padding-right: 80px;
 }
@@ -659,5 +659,8 @@ a {
   }
   .contact-icons {
     justify-content: space-between;
+  }
+  .right-footer {
+    width: 100%;
   }
 }

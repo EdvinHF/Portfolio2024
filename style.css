@@ -951,4 +951,8 @@ a {
   .contact-icons {
     justify-content: space-between;
   }
+
+  .right-footer {
+    width: 100%;
+  }
 }

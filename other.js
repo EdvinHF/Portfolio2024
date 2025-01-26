@@ -45,14 +45,20 @@ document.addEventListener("DOMContentLoaded", () => {
   const handleScroll = () => {
     const currentScrollY = window.scrollY;
 
-    if (currentScrollY < lastScrollY && isHidden) {
+    if (currentScrollY <= 100) {
       navigation.classList.remove("hide");
       navigation.classList.add("show");
       isHidden = false;
     } else if (currentScrollY > lastScrollY && !isHidden) {
+      // Hide navigation when scrolling down
       navigation.classList.remove("show");
       navigation.classList.add("hide");
       isHidden = true;
+    } else if (currentScrollY < lastScrollY && isHidden) {
+      // Show navigation when scrolling up
+      navigation.classList.remove("hide");
+      navigation.classList.add("show");
+      isHidden = false;
     }
 
     lastScrollY = currentScrollY;
