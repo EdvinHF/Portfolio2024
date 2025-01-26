@@ -835,3 +835,42 @@ a {
 #behance {
   height: 20px;
 }
+@media (max-width: 1000px) {
+  .menu {
+    width: 100%;
+    transform: translateX(100vw);
+    padding: 30px;
+  }
+  .menu-links h3 {
+    font-size: 11vw;
+  }
+
+  @keyframes menu-open {
+    0% {
+      transform: translateX(100vw);
+    }
+
+    80% {
+      transform: translateX(-4px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes menu-close {
+    0% {
+      transform: translateX(0);
+    }
+    20% {
+      transform: translateX(-4px);
+    }
+
+    100% {
+      transform: translateX(100vw);
+    }
+  }
+  .navigation {
+    padding: 30px;
+  }
+}
