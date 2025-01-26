@@ -873,4 +873,31 @@ a {
   .navigation {
     padding: 30px;
   }
+  #heroland {
+    padding-left: 30px;
+    gap: 36vh;
+  }
+  #selectedprojects {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .footer {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+@media (max-width: 900px) {
+  .selected-wrapper {
+    background-color: none;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(50px, 1000px));
+    column-gap: 1.5%;
+    row-gap: 15px;
+    justify-content: center;
+    padding-top: 70px;
+    background-color: none;
+  }
+  .button-container {
+    justify-content: flex-start;
+  }
 }
