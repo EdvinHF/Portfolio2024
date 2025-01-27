@@ -111,6 +111,9 @@ html {
 #close-button {
   cursor: pointer;
 }
+#home-button {
+  display: none;
+}
 .menu-links h3 {
   font-size: 3.5vw;
   font-weight: 600;
@@ -206,11 +209,22 @@ a {
   padding-left: 80px;
   padding-right: 80px;
 }
+#container-about {
+  padding-left: 80px;
+  padding-right: 80px;
+  height: 100vh;
+}
 #casestext {
   display: flex;
   flex-direction: column;
   row-gap: 2vw;
   margin-bottom: 5vw;
+}
+
+#headline-about {
+  width: 60%;
+  font-size: 50px;
+  color: #232323;
 }
 
 #caseheadline {
@@ -602,6 +616,21 @@ a {
     padding-left: 30px;
     padding-right: 30px;
   }
+  #container-about {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .footer {
+    padding-bottom: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  #home-button {
+    display: flex;
+  }
+  .close-wrapper {
+    justify-content: space-between;
+  }
 }
 @media (max-width: 900px) {
   .selected-wrapper {
@@ -614,6 +643,9 @@ a {
   .center-footer {
     display: none;
   }
+  .selected-wrapper {
+    grid-template-columns: repeat(1, minmax(50px, 1000px));
+  }
 }
 @media (max-width: 800px) {
   #name {
@@ -624,9 +656,6 @@ a {
   }
 }
 @media (max-width: 550px) {
-  .selected-wrapper {
-    grid-template-columns: repeat(1, minmax(50px, 1000px));
-  }
   .button-container {
     justify-content: flex-end;
   }
@@ -652,7 +681,7 @@ a {
     padding-bottom: 30px;
     padding-left: 30px;
     padding-right: 30px;
-    height: 40vh;
+    height: fit-content;
   }
   .left-paragraph {
     display: none;
@@ -661,6 +690,9 @@ a {
     justify-content: space-between;
   }
   .right-footer {
+    width: 100%;
+  }
+  .left-center {
     width: 100%;
   }
 }

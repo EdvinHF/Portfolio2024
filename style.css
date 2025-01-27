@@ -106,10 +106,14 @@ html {
 .close-wrapper {
   width: 100%;
   display: flex;
+
   justify-content: flex-end;
 }
 #close-button {
   cursor: pointer;
+}
+#home-button {
+  display: none;
 }
 .menu-links h3 {
   font-size: 3.5vw;
@@ -892,6 +896,12 @@ a {
   #index-description {
     width: 90%;
   }
+  #home-button {
+    display: flex;
+  }
+  .close-wrapper {
+    justify-content: space-between;
+  }
 }
 @media (max-width: 900px) {
   .selected-wrapper {
@@ -943,7 +953,7 @@ a {
     padding-bottom: 30px;
     padding-left: 30px;
     padding-right: 30px;
-    height: 40vh;
+    height: fit-content;
   }
   .left-paragraph {
     display: none;
@@ -953,6 +963,9 @@ a {
   }
 
   .right-footer {
+    width: 100%;
+  }
+  .left-center {
     width: 100%;
   }
 }
