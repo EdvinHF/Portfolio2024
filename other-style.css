@@ -20,7 +20,49 @@ html {
 main {
   height: 100%;
 }
-
+.ball {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background-color: #3064ce;
+  border-radius: 50%;
+  transition: transform 0.05s ease-out;
+  pointer-events: none;
+  z-index: 20000;
+  opacity: 0;
+  animation: blinkk2reverse 1s ease-in forwards;
+}
+.large.ball {
+  animation: blinkk2 1s ease-in forwards;
+}
+@keyframes blinkk2 {
+  0% {
+    opacity: 100%;
+    filter: blur(0);
+  }
+  50% {
+    opacity: 40%;
+    filter: blur(1px);
+  }
+  100% {
+    opacity: 85%;
+    filter: blur(20px);
+  }
+}
+@keyframes blinkk2reverse {
+  0% {
+    opacity: 85%;
+    filter: blur(50px);
+  }
+  50% {
+    opacity: 40%;
+    filter: blur(1px);
+  }
+  100% {
+    opacity: 100%;
+    filter: blur(0);
+  }
+}
 .menu {
   z-index: 1001;
   top: 0;
@@ -230,8 +272,8 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: moveup2;
-  animation-duration: 1s;
+  animation: moveup2b;
+  animation-duration: 2s;
   animation-timing-function: ease-out;
 }
 #me {
@@ -257,6 +299,26 @@ a {
   animation-timing-function: ease-out;
 }
 #about-text1 {
+  width: 100%;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  line-height: 140%;
+  color: #232323;
+  animation: moveup3;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}
+b,
+#about-text1 {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  line-height: 140%;
+  color: #232323;
+  cursor: pointer;
+}
+#contact-text1 {
   width: 100%;
   font-size: 20px;
   font-weight: 500;
@@ -846,6 +908,23 @@ li {
     opacity: 85%;
   }
 }
+@keyframes moveup2b {
+  0% {
+    transform: translateY(20px);
+    opacity: 0%;
+    filter: blur(10px);
+  }
+  25% {
+    transform: translateY(20px);
+    opacity: 0%;
+  }
+
+  50% {
+    transform: translateY(0px);
+    opacity: 85%;
+    filter: blur(0px);
+  }
+}
 @keyframes moveup3 {
   0% {
     transform: translateY(20px);
@@ -1013,8 +1092,10 @@ li {
   }
   #casestext {
     width: 100%;
+    row-gap: 40px;
   }
 }
+
 @media (max-width: 550px) {
   .button-container {
     justify-content: flex-end;
@@ -1054,5 +1135,12 @@ li {
   }
   .left-center {
     width: 100%;
+  }
+  #headline-about {
+    width: 340px;
+    font-size: 29px;
+  }
+  #about-text1 {
+    font-size: 18px;
   }
 }

@@ -15,6 +15,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const closeButton = document.getElementById("close-button");
   const links = document.querySelectorAll("a.delayed-link");
   let contents = document.querySelectorAll(".disapear");
+  const ball = document.getElementById("ball");
+  let mouseX = 0;
+  let mouseY = 0;
 
   if (!navigation) {
     console.error("Navigation element not found!");
@@ -26,6 +29,42 @@ document.addEventListener("DOMContentLoaded", () => {
   let lastScrollY = 0;
   let isHidden = false;
   let scrollLogicInitialized = false;
+
+  function updateBallPosition() {
+    const x = mouseX - ball.offsetWidth / 2;
+    const y = mouseY - ball.offsetHeight / 2;
+    ball.style.transform = `translate(${x}px, ${y}px)`;
+  }
+
+  function updateBallPosition() {
+    const scrollX = window.pageXOffset;
+    const scrollY = window.pageYOffset;
+    const x = mouseX - ball.offsetWidth / 2 + scrollX;
+    const y = mouseY - ball.offsetHeight / 2 + scrollY;
+    ball.style.transform = `translate(${x}px, ${y}px)`;
+  }
+
+  document.addEventListener("mousemove", (e) => {
+    ball.style.opacity = 1;
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+    updateBallPosition();
+  });
+  document.addEventListener("mouseleave", () => {
+    ball.style.opacity = 0;
+  });
+
+  document.querySelectorAll("a, button").forEach((element) => {
+    element.addEventListener("mouseenter", () => {
+      ball.classList.add("large"); // Make ball bigger
+    });
+
+    element.addEventListener("mouseleave", () => {
+      ball.classList.remove("large"); // Restore ball size
+    });
+  });
+
+  window.addEventListener("scroll", updateBallPosition);
 
   function isElementInViewport(el) {
     const rect = el.getBoundingClientRect();
