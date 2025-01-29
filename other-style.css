@@ -17,6 +17,9 @@ html {
 .disapear.fade {
   opacity: 0;
 }
+main {
+  height: 100%;
+}
 
 .menu {
   z-index: 1001;
@@ -212,24 +215,62 @@ a {
 #container-about {
   padding-left: 80px;
   padding-right: 80px;
-  height: 100vh;
+  height: fit-content;
+}
+.content-container-about {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  justify-content: space-between;
+}
+.image-container {
+  padding-top: 180px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: moveup2;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}
+#me {
+  max-width: 500px;
+
+  height: auto;
 }
 #casestext {
   display: flex;
   flex-direction: column;
   row-gap: 2vw;
   margin-bottom: 5vw;
+  width: 50%;
 }
 
 #headline-about {
-  width: 60%;
+  width: 600px;
   font-size: 50px;
   color: #232323;
+  padding-top: 70px;
+  animation: moveup3;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}
+#about-text1 {
+  width: 100%;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  line-height: 140%;
+  color: #232323;
+  animation: moveup3;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
 }
 
 #caseheadline {
-  padding-top: 250px;
-  font-size: 35px;
+  padding-top: 180px;
+  font-size: 30px;
   font-weight: 600;
   color: #232323;
   animation: moveup3;
@@ -245,6 +286,186 @@ a {
   animation-timing-function: ease-out;
 }
 
+.fields-container {
+  width: 100%;
+  height: fit-content;
+  border-bottom: 2px solid #232323;
+  display: flex;
+  padding: 10px;
+  flex-direction: column;
+  animation: moveup3;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}
+.fields-header {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 20px;
+  cursor: pointer;
+}
+.design-list {
+  color: #232323;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  display: none;
+}
+
+.design-list.design-open {
+  color: #232323;
+  display: block;
+  animation: listanimation 0.3s ease-out forwards;
+}
+
+.fields-header2 {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 20px;
+  cursor: pointer;
+}
+.design-list2 {
+  color: #232323;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  display: none;
+}
+
+.design-list2.design-open {
+  color: #232323;
+  display: block;
+  animation: listanimation 0.3s ease-out forwards;
+}
+
+@keyframes listanimation {
+  0% {
+    transform: translateY(-35px);
+    opacity: 20%;
+    filter: blur(2px);
+  }
+  96% {
+    transform: translateY(1px);
+    opacity: 100%;
+    filter: blur(0);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+ul {
+  margin-top: 15px;
+  list-style: none;
+}
+li {
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  line-height: 140%;
+}
+.fields-h4 {
+  color: #232323;
+  font-size: 23px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.plus {
+  width: 3px;
+  height: 29px;
+  background-color: #232323;
+  position: relative;
+  transition: transform 2s ease-out;
+}
+
+.plus::before,
+.plus::after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 3px;
+  background-color: #232323;
+  transition: transform 0.3s ease-out, opacity 0.5s ease-out;
+}
+
+.plus::before {
+  transform: translate(-14px, 13.5px);
+}
+
+.plus::after {
+  transform: translate(1px, 13.5px);
+}
+
+.hover-enabled.fields-header:hover .plus {
+  animation: arrowMoveDown 0.8s ease-out forwards;
+}
+
+.hover-enabled.fields-header:hover .plus::before {
+  transform: translate(-11px, 22px) rotate(45deg);
+  opacity: 1;
+}
+
+.hover-enabled.fields-header:hover .plus::after {
+  transform: translate(-2px, 22px) rotate(-45deg);
+  opacity: 1;
+}
+
+.hover-enabled.fields-header:not(:hover) .plus {
+  animation: arrowMoveUp 0.8s ease-out forwards;
+}
+
+.close-button.plus {
+  transition: transform 0.3s ease-out, opacity 0.5s ease-out;
+  transform: rotate(45deg);
+}
+.plus2 {
+  width: 3px;
+  height: 29px;
+  background-color: #232323;
+  position: relative;
+  transition: transform 2s ease-out;
+}
+
+.plus2::before,
+.plus2::after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 3px;
+  background-color: #232323;
+  transition: transform 0.3s ease-out, opacity 0.5s ease-out;
+}
+
+.plus2::before {
+  transform: translate(-14px, 13.5px);
+}
+
+.plus2::after {
+  transform: translate(1px, 13.5px);
+}
+
+.hover-enabled.fields-header2:hover .plus2 {
+  animation: arrowMoveDown 0.8s ease-out forwards;
+}
+
+.hover-enabled.fields-header2:hover .plus2::before {
+  transform: translate(-11px, 22px) rotate(45deg);
+  opacity: 1;
+}
+
+.hover-enabled.fields-header2:hover .plus2::after {
+  transform: translate(-2px, 22px) rotate(-45deg);
+  opacity: 1;
+}
+
+.hover-enabled.fields-header2:not(:hover) .plus2 {
+  animation: arrowMoveUp 0.8s ease-out forwards;
+}
+
+.close-button.plus2 {
+  transition: transform 0.3s ease-out, opacity 0.5s ease-out;
+  transform: rotate(45deg);
+}
 .selected-wrapper {
   background-color: none;
   display: grid;
@@ -255,6 +476,80 @@ a {
   padding-top: 40px;
   background-color: none;
 }
+
+.button-container {
+  width: 100%;
+  padding-top: 40px;
+  display: flex;
+  justify-content: flex-start;
+  animation: moveup3;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}
+.button-cases {
+  width: 200px;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  height: 45px;
+  border-radius: 30px;
+  background-color: #3064ce;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #dddddd;
+  border-width: 0;
+  gap: 5px;
+  padding-right: 10px;
+}
+.button-cases:hover {
+  animation: blinkk 1s ease-out forwards;
+}
+.whitearrow {
+  width: 30px;
+  height: 3px;
+  background-color: #dddddd;
+  position: relative;
+  animation: arrowMoveRight 0.8s ease-out forwards;
+}
+
+.whitearrow::before,
+.whitearrow::after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 3px;
+  background-color: #dddddd;
+  opacity: 0;
+  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.whitearrow::before {
+  transform: translateX(-10px);
+}
+
+.whitearrow::after {
+  transform: translateX(-10px);
+}
+
+.button-cases:hover .whitearrow {
+  animation: arrowMoveRight 0.8s ease-out forwards;
+}
+
+.button-cases:hover .whitearrow::before {
+  transform: translate(2px, 4.3px) rotate(-45deg);
+  opacity: 1;
+}
+
+.button-cases:hover .whitearrow::after {
+  transform: translate(2px, -4px) rotate(45deg);
+  opacity: 1;
+}
+
+.button-cases:not(:hover) .whitearrow {
+  animation: arrowMoveLeft 0.8s ease-out forwards;
+}
+
 .herocard {
   background-color: none;
   stroke-width: 1px;
@@ -483,6 +778,26 @@ a {
 #behance {
   height: 20px;
 }
+@keyframes arrowMoveDown {
+  50% {
+    transform: translateY(0);
+    opacity: 20%;
+  }
+  100% {
+    transform: translateY(6px);
+    opacity: 85%;
+  }
+}
+@keyframes arrowMoveUp {
+  0% {
+    transform: translateY(6px);
+    opacity: 0.85;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 @keyframes arrowMoveRight {
   50% {
     transform: translateX(0);
@@ -561,6 +876,30 @@ a {
     opacity: 85%;
   }
 }
+
+@media (max-width: 1300px) {
+  #me {
+    width: 70%;
+    height: auto;
+    padding-top: 130px;
+  }
+  #headline-about {
+    width: 600px;
+    font-size: 45px;
+    color: #232323;
+    padding-top: 70px;
+  }
+}
+
+@media (max-width: 1200px) {
+  #headline-about {
+    width: 500px;
+    font-size: 40px;
+    color: #232323;
+    padding-top: 70px;
+  }
+}
+
 @media (max-width: 1000px) {
   .menu {
     width: 100%;
@@ -646,6 +985,13 @@ a {
   .selected-wrapper {
     grid-template-columns: repeat(1, minmax(50px, 1000px));
   }
+
+  #headline-about {
+    width: 400px;
+    font-size: 35px;
+    color: #232323;
+    padding-top: 70px;
+  }
 }
 @media (max-width: 800px) {
   #name {
@@ -653,6 +999,20 @@ a {
   }
   #index-description {
     font-size: 25px;
+  }
+
+  .content-container-about {
+    flex-direction: column;
+  }
+  #me {
+    min-width: 100%;
+    padding-top: 50px;
+  }
+  .image-container {
+    padding-top: 0px;
+  }
+  #casestext {
+    width: 100%;
   }
 }
 @media (max-width: 550px) {

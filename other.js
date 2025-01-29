@@ -6,6 +6,14 @@ document.addEventListener("DOMContentLoaded", () => {
   const herocards = document.querySelectorAll(".herocard");
   const links = document.querySelectorAll("a.delayed-link");
   let contents = document.querySelectorAll(".disapear");
+  const listButton = document.querySelector(".fields-header");
+  const designList = document.querySelector(".design-list");
+  const plus = document.querySelector(".plus");
+  let designOpen = false;
+  const listButton2 = document.querySelector(".fields-header2");
+  const designList2 = document.querySelector(".design-list2");
+  const plus2 = document.querySelector(".plus2");
+  let designOpen2 = false;
 
   if (!navigation) {
     console.error("Navigation element not found!");
@@ -104,5 +112,32 @@ document.addEventListener("DOMContentLoaded", () => {
         window.location.href = targetUrl;
       }, 500);
     });
+  });
+
+  listButton.addEventListener("click", () => {
+    if (!designOpen) {
+      designList.classList.add("design-open");
+      listButton.classList.remove("hover-enabled");
+      plus.classList.add("close-button");
+    } else {
+      designList.classList.remove("design-open");
+      listButton.classList.add("hover-enabled");
+      plus.classList.remove("close-button");
+    }
+    designOpen = !designOpen; // Toggle the flag
+  });
+
+  listButton2.addEventListener("click", () => {
+    if (!designOpen2) {
+      designList2.classList.add("design-open");
+      listButton2.classList.remove("hover-enabled");
+      plus2.classList.add("close-button");
+      console.log("open");
+    } else {
+      designList2.classList.remove("design-open");
+      listButton2.classList.add("hover-enabled");
+      plus2.classList.remove("close-button");
+    }
+    designOpen2 = !designOpen2; // Toggle the flag
   });
 });
