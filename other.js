@@ -14,6 +14,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const designList2 = document.querySelector(".design-list2");
   const plus2 = document.querySelector(".plus2");
   let designOpen2 = false;
+
+  /*
   const ball = document.getElementById("ball");
   let mouseX = 0;
   let mouseY = 0;
@@ -53,6 +55,8 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   window.addEventListener("scroll", updateBallPosition);
+
+  */
 
   if (!navigation) {
     console.error("Navigation element not found!");
@@ -96,6 +100,7 @@ document.addEventListener("DOMContentLoaded", () => {
       navigation.classList.remove("hide");
       navigation.classList.add("show");
       isHidden = false;
+      //navigation.style.backgroundColor = "#f0f0f000";
     } else if (currentScrollY > lastScrollY && !isHidden) {
       // Hide navigation when scrolling down
       navigation.classList.remove("show");
@@ -106,7 +111,10 @@ document.addEventListener("DOMContentLoaded", () => {
       navigation.classList.remove("hide");
       navigation.classList.add("show");
       isHidden = false;
-    }
+    } /*else if (currentScrollY > 100) {
+      navigation.style.backgroundColor = "#f0f0f050";
+     
+    }*/
 
     lastScrollY = currentScrollY;
   };
@@ -115,6 +123,7 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("scroll", addScrolledClass);
 
   menuButton.addEventListener("click", () => {
+    event.stopPropagation();
     menu.classList.add("open");
     menu.classList.remove("close");
     menuButton.classList.add("remove");
@@ -122,6 +131,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   closeButton.addEventListener("click", () => {
+    event.stopPropagation();
     menu.classList.remove("open");
     menu.classList.add("close");
     menuButton.classList.add("add");
@@ -167,6 +177,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   listButton2.addEventListener("click", () => {
+    event.stopPropagation();
     if (!designOpen2) {
       designList2.classList.add("design-open");
       listButton2.classList.remove("hover-enabled");

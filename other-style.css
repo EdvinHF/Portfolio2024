@@ -20,6 +20,7 @@ html {
 main {
   height: 100%;
 }
+/*
 .ball {
   position: absolute;
   width: 25px;
@@ -35,6 +36,8 @@ main {
 .large.ball {
   animation: blinkk2 1s ease-in forwards;
 }
+
+
 @keyframes blinkk2 {
   0% {
     opacity: 100%;
@@ -63,6 +66,8 @@ main {
     filter: blur(0);
   }
 }
+
+*/
 .menu {
   z-index: 1001;
   top: 0;
@@ -309,14 +314,15 @@ a {
   animation-duration: 1s;
   animation-timing-function: ease-out;
 }
-b,
-#about-text1 {
+
+#contact-text1 b {
   font-size: 20px;
   font-weight: 600;
   letter-spacing: 1px;
   line-height: 140%;
   color: #232323;
   cursor: pointer;
+  white-space: nowrap;
 }
 #contact-text1 {
   width: 100%;
@@ -1098,7 +1104,7 @@ li {
 
 @media (max-width: 550px) {
   .button-container {
-    justify-content: flex-end;
+    justify-content: flex-start;
   }
   #name {
     font-size: 28px;

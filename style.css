@@ -17,6 +17,8 @@ html {
 .disapear.fade {
   opacity: 0;
 }
+
+/*
 .ball {
   position: absolute;
   width: 25px;
@@ -31,6 +33,9 @@ html {
 }
 .large.ball {
   animation: blinkk2 0.5s ease-in forwards;
+}
+.hidden.ball {
+  display: none;
 }
 @keyframes blinkk2 {
   0% {
@@ -60,6 +65,7 @@ html {
     filter: blur(0);
   }
 }
+  */
 .menu {
   z-index: 1001;
   top: 0;

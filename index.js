@@ -15,9 +15,56 @@ document.addEventListener("DOMContentLoaded", () => {
   const closeButton = document.getElementById("close-button");
   const links = document.querySelectorAll("a.delayed-link");
   let contents = document.querySelectorAll(".disapear");
-  const ball = document.getElementById("ball");
+  /*const ball = document.getElementById("ball");
   let mouseX = 0;
-  let mouseY = 0;
+  let mouseY = 0;*/
+
+  /*
+  function isTouchDevice() {
+    return "ontouchstart" in window || navigator.maxTouchPoints > 0;
+  }
+
+  // If it's a touch device, hide the ball
+  if (isTouchDevice()) {
+    ball.classList.add("hidden"); // Add the class to hide the ball
+  } else {
+    function updateBallPosition() {
+      const x = mouseX - ball.offsetWidth / 2;
+      const y = mouseY - ball.offsetHeight / 2;
+      ball.style.transform = `translate(${x}px, ${y}px)`;
+    }
+
+    function updateBallPosition() {
+      const scrollX = window.pageXOffset;
+      const scrollY = window.pageYOffset;
+      const x = mouseX - ball.offsetWidth / 2 + scrollX;
+      const y = mouseY - ball.offsetHeight / 2 + scrollY;
+      ball.style.transform = `translate(${x}px, ${y}px)`;
+    }
+
+    document.addEventListener("mousemove", (e) => {
+      ball.style.opacity = 1;
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+      updateBallPosition();
+    });
+    document.addEventListener("mouseleave", () => {
+      ball.style.opacity = 0;
+    });
+
+    document.querySelectorAll("a, button").forEach((element) => {
+      element.addEventListener("mouseenter", () => {
+        ball.classList.add("large"); // Make ball bigger
+      });
+
+      element.addEventListener("mouseleave", () => {
+        ball.classList.remove("large"); // Restore ball size
+      });
+    });
+
+    window.addEventListener("scroll", updateBallPosition);
+  }
+    */
 
   if (!navigation) {
     console.error("Navigation element not found!");
@@ -29,42 +76,6 @@ document.addEventListener("DOMContentLoaded", () => {
   let lastScrollY = 0;
   let isHidden = false;
   let scrollLogicInitialized = false;
-
-  function updateBallPosition() {
-    const x = mouseX - ball.offsetWidth / 2;
-    const y = mouseY - ball.offsetHeight / 2;
-    ball.style.transform = `translate(${x}px, ${y}px)`;
-  }
-
-  function updateBallPosition() {
-    const scrollX = window.pageXOffset;
-    const scrollY = window.pageYOffset;
-    const x = mouseX - ball.offsetWidth / 2 + scrollX;
-    const y = mouseY - ball.offsetHeight / 2 + scrollY;
-    ball.style.transform = `translate(${x}px, ${y}px)`;
-  }
-
-  document.addEventListener("mousemove", (e) => {
-    ball.style.opacity = 1;
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-    updateBallPosition();
-  });
-  document.addEventListener("mouseleave", () => {
-    ball.style.opacity = 0;
-  });
-
-  document.querySelectorAll("a, button").forEach((element) => {
-    element.addEventListener("mouseenter", () => {
-      ball.classList.add("large"); // Make ball bigger
-    });
-
-    element.addEventListener("mouseleave", () => {
-      ball.classList.remove("large"); // Restore ball size
-    });
-  });
-
-  window.addEventListener("scroll", updateBallPosition);
 
   function isElementInViewport(el) {
     const rect = el.getBoundingClientRect();
@@ -96,15 +107,20 @@ document.addEventListener("DOMContentLoaded", () => {
       navigation.classList.remove("hide");
       navigation.classList.add("show");
       isHidden = false;
+
+      console.log(currentScrollY);
     } else if (currentScrollY > lastScrollY && !isHidden) {
+      // Hide navigation when scrolling down
       navigation.classList.remove("show");
       navigation.classList.add("hide");
       isHidden = true;
     } else if (currentScrollY < lastScrollY && isHidden) {
+      // Show navigation when scrolling up
       navigation.classList.remove("hide");
       navigation.classList.add("show");
       isHidden = false;
     }
+
     if (isHalfElementInViewport(indexDescription)) {
       indexDescription.classList.add("scrolled");
     }
