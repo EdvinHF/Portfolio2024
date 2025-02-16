@@ -27,11 +27,10 @@
     />
     <meta name="author" content="Edvin Höglin Forsberg" />
     <title>Edvin Höglin Forsberg</title>
-    <link rel="icon" type="image/x-icon" href="/images/hf_logga-03.svg" />
-    <link rel="icon" href="/images/hf_logga-03.svg" />
+    <link rel="icon" type="image/x-icon" href="/images/icon1.svg" />
+    <link rel="icon" href="/images/icon1.svg" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://use.typekit.net/cla0evs.css" />
-    <link rel="icon" href="img/Untitled-2.jpg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -65,7 +64,9 @@
     <div class="menu">
       <div class="top-menu">
         <span class="close-wrapper">
-          <a href="index.html" id="home-button">Edvin Höglin Forsberg</a>
+          <a href="index.html" class="delayed-link" id="home-button"
+            >Edvin Höglin Forsberg</a
+          >
           <a id="close-button">Close</a>
         </span>
         <div class="menu-links">
@@ -79,20 +80,21 @@
         </div>
       </div>
       <div class="bottom-menu">
-        <p>Ⓒ Edvin Höglin Forsberg - 2024</p>
+        <p>© Edvin Höglin Forsberg - 2024</p>
         <img id="menu-icon" src="images/hf_logga-02.svg" alt="" />
       </div>
     </div>
     <div id="container">
       <nav class="navigation">
         <div class="nav-left">
-          <a href="">Edvin Höglin Forsberg</a>
+          <a class="delayed-link" href="">Edvin Höglin Forsberg</a>
         </div>
         <div class="nav-right">
           <a id="hover-item" class="hover-item">Menu</a>
         </div>
       </nav>
       <main class="disapear">
+        <div id="hero-animation"></div>
         <div id="heroland">
           <div id="word-container">
             <a class="delayed-link" href="cases.html">
@@ -110,70 +112,86 @@
             </div>
           </div>
           <div class="name">
-            <p id="name">
-              Best designer guy, cool and <br />awesome digital person. ツ
-            </p>
+            <p id="name">Let’s Create Something <br />Remarkable Together ツ</p>
           </div>
         </div>
         <div id="selectedprojects">
           <div class="header2">
-            <h2 class="h21">Developer</h2>
-            <h2 class="h22">Creative</h2>
-            <h2 class="h23">Designer</h2>
+            <h2 class="h21">Design</h2>
+            <h2 class="h22">Art Direction</h2>
+            <h2 class="h23">Development</h2>
           </div>
           <div class="index-description">
             <p id="index-description">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate
-              <a href="" id="index-description-link">Read more</a>
+              Hi! I'm Edvin Höglin Forsberg I’m a graphic designer and developer
+              with a deep passion for creativity and problem-solving. My journey
+              is driven by the desire to craft designs that not only captivate
+              but also communicate compelling stories. From branding and
+              typography to content creation and web development, I thrive on
+              creating visuals that are striking, meaningful, and unique. My
+              goal is to create designs that truly resonate with audiences and
+              add value to every collaboration. While graphic design fuels my
+              creativity
+
+              <a
+                class="delayed-link"
+                href="about.html"
+                id="index-description-link"
+                >Read more</a
+              >
             </p>
           </div>
           <div class="selected-headline">
             <h1 id="selected-headline">Selected Projects</h1>
           </div>
           <div class="selected-wrapper">
-            <div class="herocard" id="herocard1">
-              <div class="thumbnail">
-                <video
-                  class="thumbnail-img"
-                  autoplay=""
-                  playsinline=""
-                  muted=""
-                  loop=""
-                  preload="metadata"
-                  poster=""
-                  src="images/elbit/Elbit-Systems_logo-animation.mp4"
-                ></video>
-              </div>
-              <div class="card-wrapper">
-                <div class="info">
-                  <p class="left-info">Elbit Systems Sweden</p>
-                  <p class="right-info">Motion Graphics</p>
+            <a class="delayed-link" href="case1.html">
+              <div class="herocard" id="herocard1">
+                <div class="thumbnail">
+                  <video
+                    class="thumbnail-img"
+                    autoplay=""
+                    playsinline=""
+                    muted=""
+                    loop=""
+                    preload="metadata"
+                    poster=""
+                    src="images/elbit/Elbit-Systems_logo-animation.mp4"
+                  ></video>
                 </div>
-                <div class="description">
-                  <p class="description">Logo Animation</p>
-                  <div class="small-arrow"></div>
-                </div>
-              </div>
-            </div>
-            <div class="herocard" id="herocard2">
-              <div class="thumbnail">
-                <img class="thumbnail-img" src="images/troax-main.png" alt="" />
-              </div>
-              <div class="card-wrapper">
-                <div class="info">
-                  <p class="left-info">Troax</p>
-                  <p class="right-info">Content Creation</p>
-                </div>
-                <div class="description">
-                  <p class="description">Internship 2024</p>
-                  <div class="small-arrow"></div>
+                <div class="card-wrapper">
+                  <div class="info">
+                    <p class="left-info">Elbit Systems Sweden</p>
+                    <p class="right-info">Motion Graphics</p>
+                  </div>
+                  <div class="description">
+                    <p class="description">Logo Animation</p>
+                    <div class="small-arrow"></div>
+                  </div>
                 </div>
               </div>
-            </div>
+            </a>
+            <a class="delayed-link" href="case2.html">
+              <div class="herocard" id="herocard2">
+                <div class="thumbnail">
+                  <img
+                    class="thumbnail-img"
+                    src="images/Troax/troax-main.png"
+                    alt=""
+                  />
+                </div>
+                <div class="card-wrapper">
+                  <div class="info">
+                    <p class="left-info">Troax Group</p>
+                    <p class="right-info">Content Creation</p>
+                  </div>
+                  <div class="description">
+                    <p class="description">Internship 2024</p>
+                    <div class="small-arrow"></div>
+                  </div>
+                </div>
+              </div>
+            </a>
             <div class="herocard" id="herocard3">
               <div class="thumbnail">
                 <video
@@ -214,21 +232,16 @@
           <div class="left-footer">
             <h3 class="footer-name">Edvin Höglin Forsberg</h3>
             <p class="left-paragraph">
-              Best designer guy, cool and <br />
-              awesome digital person
+              Let’s Create Something <br />Remarkable Together ツ
             </p>
           </div>
           <div class="center-footer">
-            <h2>Case</h2>
-            <h2>About</h2>
-            <h2>Contact</h2>
+            <a class="delayed-link" href="cases.html"><h2>Case</h2></a>
+            <a class="delayed-link" href="about.html"><h2>About</h2></a>
+            <a class="delayed-link" href="contact.html"><h2>Contact</h2></a>
           </div>
         </div>
         <div class="right-footer">
-          <p class="right-paragraph">
-            Best designer guy, cool and inclusive digital<br />
-            person designer guy, cool.
-          </p>
           <div class="contact-icons">
             <div class="contact-info">
               <h3 class="touch">Want to get in touch?</h3>

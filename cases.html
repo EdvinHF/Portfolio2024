@@ -27,11 +27,10 @@
     />
     <meta name="author" content="Edvin Höglin Forsberg" />
     <title>Edvin Höglin Forsberg</title>
-    <link rel="icon" type="image/x-icon" href="/images/hf_logga-03.svg" />
-    <link rel="icon" href="/images/hf_logga-03.svg" />
+    <link rel="icon" type="image/x-icon" href="/images/icon1.svg" />
+    <link rel="icon" href="/images/icon1.svg" />
     <link rel="stylesheet" href="other-style.css" />
     <link rel="stylesheet" href="https://use.typekit.net/cla0evs.css" />
-    <link rel="icon" href="img/Untitled-2.jpg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -55,7 +54,9 @@
     <div class="menu">
       <div class="top-menu">
         <span class="close-wrapper">
-          <a href="index.html" id="home-button">Edvin Höglin Forsberg</a>
+          <a href="index.html" class="delayed-link" id="home-button"
+            >Edvin Höglin Forsberg</a
+          >
           <a id="close-button">Close</a>
         </span>
         <div class="menu-links">
@@ -69,14 +70,14 @@
         </div>
       </div>
       <div class="bottom-menu">
-        <p>Ⓒ Edvin Höglin Forsberg - 2024</p>
+        <p>© Edvin Höglin Forsberg - 2024</p>
         <img id="menu-icon" src="images/hf_logga-02.svg" alt="" />
       </div>
     </div>
     <div id="container">
       <nav class="navigation">
         <div class="nav-left">
-          <a href="index.html">Edvin Höglin Forsberg</a>
+          <a class="delayed-link" href="index.html">Edvin Höglin Forsberg</a>
         </div>
         <div class="nav-right">
           <a id="hover-item" class="hover-item">Menu</a>
@@ -86,13 +87,15 @@
         <div id="casestext">
           <h1 id="caseheadline">Cases</h1>
           <p id="casedescription">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua ut
-            labore.
+            Over the past three years, I’ve had the opportunity to work on a
+            range of projects that have helped me grow both creatively and
+            technically. These projects include a mix of real-world cases and
+            fictional concepts, developed through university courses or personal
+            exploration.
           </p>
         </div>
         <div class="selected-wrapper">
-          <a href="case1.html">
+          <a class="delayed-link" href="case1.html">
             <div class="herocard" id="herocard1">
               <div class="thumbnail">
                 <video
@@ -112,27 +115,33 @@
                   <p class="right-info">Motion Graphics</p>
                 </div>
                 <div class="description">
-                  <p class="description">Logo Animation</p>
+                  <p class="description">Elbit Systems Logo Animation</p>
                   <div class="small-arrow"></div>
                 </div>
               </div>
             </div>
           </a>
-          <div class="herocard" id="herocard2">
-            <div class="thumbnail">
-              <img class="thumbnail-img" src="images/troax-main.png" alt="" />
-            </div>
-            <div class="card-wrapper">
-              <div class="info">
-                <p class="left-info">TROAX Group</p>
-                <p class="right-info">Content Creation</p>
+          <a class="delayed-link" href="case2.html">
+            <div class="herocard" id="herocard2">
+              <div class="thumbnail">
+                <img
+                  class="thumbnail-img"
+                  src="images/Troax/troax-main.png"
+                  alt=""
+                />
               </div>
-              <div class="description">
-                <p class="description">Internship 2024</p>
-                <div class="small-arrow"></div>
+              <div class="card-wrapper">
+                <div class="info">
+                  <p class="left-info">Troax Group</p>
+                  <p class="right-info">Content Creation</p>
+                </div>
+                <div class="description">
+                  <p class="description">Troax Internship 2024</p>
+                  <div class="small-arrow"></div>
+                </div>
               </div>
             </div>
-          </div>
+          </a>
           <div class="herocard" id="herocard3">
             <div class="thumbnail">
               <img class="thumbnail-img" src="images/hugologga.png" alt="" />
@@ -172,94 +181,116 @@
               </div>
             </div>
           </div>
-          <div class="herocard" id="herocard3">
-            <div class="thumbnail">
-              <img
-                class="thumbnail-img"
-                src="images/firley-brew-mockup.png"
-                alt=""
-              />
-            </div>
-            <div class="card-wrapper">
-              <div class="info">
-                <p class="left-info">Firley Brewed</p>
-                <p class="right-info">Web development</p>
+          <a class="delayed-link" href="case5.html">
+            <div class="herocard" id="herocard3">
+              <div class="thumbnail">
+                <img
+                  class="thumbnail-img"
+                  src="images/firley-Mockup.png"
+                  alt=""
+                />
               </div>
-              <div class="description">
-                <p class="description">Full Stack Rest API</p>
-                <div class="small-arrow"></div>
-              </div>
-            </div>
-          </div>
-          <div class="herocard" id="herocard3">
-            <div class="thumbnail">
-              <video
-                class="thumbnail-img"
-                autoplay=""
-                playsinline=""
-                muted=""
-                loop=""
-                preload="metadata"
-                poster=""
-                src="images/Comp 1_4.mp4"
-              ></video>
-            </div>
-            <div class="card-wrapper">
-              <div class="info">
-                <p class="left-info">Escaped Fragrance</p>
-                <p class="right-info">Motion Graphics</p>
-              </div>
-              <div class="description">
-                <p class="description">Escaped Fragrance Animation</p>
-                <div class="small-arrow"></div>
+              <div class="card-wrapper">
+                <div class="info">
+                  <p class="left-info">Firley Brewed</p>
+                  <p class="right-info">Web development</p>
+                </div>
+                <div class="description">
+                  <p class="description">Full Stack Rest API</p>
+                  <div class="small-arrow"></div>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="herocard" id="herocard3">
-            <div class="thumbnail">
-              <img class="thumbnail-img" src="images/hero.png" alt="" />
-            </div>
-            <div class="card-wrapper">
-              <div class="info">
-                <p class="left-info">Edvin Höglin Forsberg</p>
-                <p class="right-info">Full Treatment</p>
+          </a>
+          <a class="delayed-link" href="case6.html">
+            <div class="herocard" id="herocard3">
+              <div class="thumbnail">
+                <video
+                  class="thumbnail-img"
+                  autoplay=""
+                  playsinline=""
+                  muted=""
+                  loop=""
+                  preload="metadata"
+                  poster=""
+                  src="images/Comp 1_4.mp4"
+                ></video>
               </div>
-              <div class="description">
-                <p class="description">Personal Branding & Development</p>
-                <div class="small-arrow"></div>
-              </div>
-            </div>
-          </div>
-          <div class="herocard" id="herocard3">
-            <div class="thumbnail">
-              <img class="thumbnail-img" src="images/nomu-main.png" alt="" />
-            </div>
-            <div class="card-wrapper">
-              <div class="info">
-                <p class="left-info">Nomu</p>
-                <p class="right-info">Branding</p>
-              </div>
-              <div class="description">
-                <p class="description">Nomu Brand Creation</p>
-                <div class="small-arrow"></div>
+              <div class="card-wrapper">
+                <div class="info">
+                  <p class="left-info">Escaped Fragrance</p>
+                  <p class="right-info">Motion Graphics</p>
+                </div>
+                <div class="description">
+                  <p class="description">Escaped Fragrance Animation</p>
+                  <div class="small-arrow"></div>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="herocard" id="herocard3">
-            <div class="thumbnail">
-              <img class="thumbnail-img" src="images/Umble-beans.png" alt="" />
-            </div>
-            <div class="card-wrapper">
-              <div class="info">
-                <p class="left-info">Umble Beans</p>
-                <p class="right-info">Web Development</p>
+          </a>
+          <a class="delayed-link" href="case7.html">
+            <div class="herocard" id="herocard3">
+              <div class="thumbnail">
+                <img
+                  class="thumbnail-img"
+                  src="images/personal-branding.png"
+                  alt=""
+                />
               </div>
-              <div class="description">
-                <p class="description">Umble Beans Front-End Website</p>
-                <div class="small-arrow"></div>
+              <div class="card-wrapper">
+                <div class="info">
+                  <p class="left-info">Edvin Höglin Forsberg</p>
+                  <p class="right-info">Brand Creation</p>
+                </div>
+                <div class="description">
+                  <p class="description">Personal Branding</p>
+                  <div class="small-arrow"></div>
+                </div>
               </div>
             </div>
-          </div>
+          </a>
+          <a class="delayed-link" href="case8.html">
+            <div class="herocard" id="herocard3">
+              <div class="thumbnail">
+                <img
+                  class="thumbnail-img"
+                  src="images/Nomu/nomu-main.png"
+                  alt=""
+                />
+              </div>
+              <div class="card-wrapper">
+                <div class="info">
+                  <p class="left-info">Nomu</p>
+                  <p class="right-info">Branding</p>
+                </div>
+                <div class="description">
+                  <p class="description">Nomu Brand Creation</p>
+                  <div class="small-arrow"></div>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a class="delayed-link" href="case9.html">
+            <div class="herocard" id="herocard3">
+              <div class="thumbnail">
+                <img
+                  class="thumbnail-img"
+                  src="images/umble-Mockup.png"
+                  alt=""
+                />
+              </div>
+              <div class="card-wrapper">
+                <div class="info">
+                  <p class="left-info">Umble Beans</p>
+                  <p class="right-info">Web Development</p>
+                </div>
+                <div class="description">
+                  <p class="description">Umble Beans Front-End Website</p>
+                  <div class="small-arrow"></div>
+                </div>
+              </div>
+            </div>
+          </a>
         </div>
       </main>
     </div>
@@ -268,21 +299,16 @@
         <div class="left-footer">
           <h3 class="footer-name">Edvin Höglin Forsberg</h3>
           <p class="left-paragraph">
-            Best designer guy, cool and <br />
-            awesome digital person
+            Let’s Create Something <br />Remarkable Together ツ
           </p>
         </div>
         <div class="center-footer">
-          <h2>Case</h2>
-          <h2>About</h2>
-          <h2>Contact</h2>
+          <a class="delayed-link" href="cases.html"><h2>Case</h2></a>
+          <a class="delayed-link" href="about.html"><h2>About</h2></a>
+          <a class="delayed-link" href="contact.html"><h2>Contact</h2></a>
         </div>
       </div>
       <div class="right-footer">
-        <p class="right-paragraph">
-          Best designer guy, cool and inclusive digital<br />
-          person designer guy, cool.
-        </p>
         <div class="contact-icons">
           <div class="contact-info">
             <h3 class="touch">Want to get in touch?</h3>

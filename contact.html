@@ -27,11 +27,10 @@
     />
     <meta name="author" content="Edvin Höglin Forsberg" />
     <title>Edvin Höglin Forsberg</title>
-    <link rel="icon" type="image/x-icon" href="/images/hf_logga-03.svg" />
-    <link rel="icon" href="/images/hf_logga-03.svg" />
+    <link rel="icon" type="image/x-icon" href="/images/icon1.svg" />
+    <link rel="icon" href="/images/icon1.svg" />
     <link rel="stylesheet" href="other-style.css" />
     <link rel="stylesheet" href="https://use.typekit.net/cla0evs.css" />
-    <link rel="icon" href="img/Untitled-2.jpg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -55,7 +54,9 @@
     <div class="menu">
       <div class="top-menu">
         <span class="close-wrapper">
-          <a href="index.html" id="home-button">Edvin Höglin Forsberg</a>
+          <a class="delayed-link" href="index.html" id="home-button"
+            >Edvin Höglin Forsberg</a
+          >
           <a id="close-button">Close</a>
         </span>
         <div class="menu-links">
@@ -69,7 +70,7 @@
         </div>
       </div>
       <div class="bottom-menu">
-        <p>Ⓒ Edvin Höglin Forsberg - 2024</p>
+        <p>© Edvin Höglin Forsberg - 2024</p>
         <img id="menu-icon" src="images/hf_logga-02.svg" alt="" />
       </div>
     </div>
@@ -77,7 +78,7 @@
     <div id="container-about">
       <nav class="navigation">
         <div class="nav-left">
-          <a href="index.html">Edvin Höglin Forsberg</a>
+          <a class="delayed-link" href="index.html">Edvin Höglin Forsberg</a>
         </div>
         <div class="nav-right">
           <a id="hover-item" class="hover-item">Menu</a>
@@ -115,11 +116,16 @@
           </div>
 
           <div class="image-container">
-            <img
-              id="me"
-              src="images/tumblr_ozyx4fTfxy1wff8mpo1_1280.jpg"
-              alt=""
-            />
+            <video
+              class="fire"
+              autoplay=""
+              playsinline=""
+              muted=""
+              loop=""
+              preload="metadata"
+              poster=""
+              src="images/fire.mp4"
+            ></video>
           </div>
         </div>
       </main>
@@ -129,21 +135,16 @@
         <div class="left-footer">
           <h3 class="footer-name">Edvin Höglin Forsberg</h3>
           <p class="left-paragraph">
-            Best designer guy, cool and <br />
-            awesome digital person
+            Let’s Create Something <br />Remarkable Together ツ
           </p>
         </div>
         <div class="center-footer">
-          <h2>Case</h2>
-          <h2>About</h2>
-          <h2>Contact</h2>
+          <a class="delayed-link" href="cases.html"><h2>Case</h2></a>
+          <a class="delayed-link" href="about.html"><h2>About</h2></a>
+          <a class="delayed-link" href="contact.html"><h2>Contact</h2></a>
         </div>
       </div>
       <div class="right-footer">
-        <p class="right-paragraph">
-          Best designer guy, cool and inclusive digital<br />
-          person designer guy, cool.
-        </p>
         <div class="contact-icons">
           <div class="contact-info">
             <h3 class="touch">Want to get in touch?</h3>
@@ -158,5 +159,6 @@
         </div>
       </div>
     </footer>
+    </div>
   </body>
 </html>

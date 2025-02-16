@@ -264,7 +264,7 @@ a {
 
 .header-image-container {
   width: 100%; /* Full width of the viewport */
-  height: 80vh; /* 80% of the viewport height */
+  height: 85vh; /* 80% of the viewport height */
   aspect-ratio: 4 / 3; /* Maintain 4:3 aspect ratio */
   overflow: hidden; /* Hide overflow if the image exceeds container */
   position: relative;
@@ -279,6 +279,9 @@ a {
   object-fit: cover; /* Ensures image covers the container without stretching */
   object-position: center; /* Center the image */
   overflow: hidden;
+  animation: moveup3;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
 }
 #container {
   padding-left: 80px;
@@ -290,6 +293,9 @@ a {
   margin-top: 30px;
   margin-bottom: 30px;
   justify-content: space-between;
+  animation: moveup2;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
 }
 #left-text {
   max-width: 800px;
@@ -338,6 +344,23 @@ a {
   line-height: 140%;
   margin-top: 8px;
 }
+#casedescription {
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  line-height: 140%;
+  margin-top: 8px;
+}
+.casedescription2 {
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  line-height: 140%;
+  margin-top: 8px;
+  max-width: 800px;
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
 .selected-wrapper {
   background-color: none;
   display: grid;
@@ -358,7 +381,7 @@ a {
   flex-direction: row;
   justify-content: space-between;
   overflow: hidden;
-  cursor: pointer;
+
   opacity: 0;
 }
 
@@ -435,6 +458,9 @@ a {
   margin-top: 70px;
   padding-left: 80px;
   padding-right: 80px;
+  animation: moveup3;
+  animation-duration: 1.3s;
+  animation-timing-function: ease-out;
 }
 .left-center {
   width: 40%;
@@ -480,6 +506,7 @@ a {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
+  flex-direction: column;
 }
 .contact-info h3 {
   font-size: 20px;
@@ -500,12 +527,14 @@ a {
   height: 25px;
 }
 .icons {
+  padding-top: 13px;
   display: flex;
   gap: 9px;
   align-items: center;
+  width: 100%;
 }
 #behance {
-  height: 20px;
+  height: 19px;
 }
 @keyframes arrowMoveDown {
   50% {
@@ -782,7 +811,16 @@ a {
     padding-top: 0px;
   }
 }
-
+@media (max-width: 600px) {
+  .footer {
+    flex-direction: column;
+    height: fit-content;
+  }
+  .left-center {
+    width: 100%;
+    padding-bottom: 25px;
+  }
+}
 @media (max-width: 550px) {
   .button-container {
     justify-content: flex-start;
@@ -811,15 +849,11 @@ a {
     padding-right: 30px;
     height: fit-content;
   }
-  .left-paragraph {
-    display: none;
-  }
+
   .contact-icons {
     justify-content: space-between;
   }
-  .right-footer {
-    width: 100%;
-  }
+
   .left-center {
     width: 100%;
   }
