@@ -351,6 +351,15 @@ a {
   line-height: 140%;
   margin-top: 8px;
 }
+
+.text-link {
+  text-decoration: underline;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  line-height: 140%;
+  cursor: pointer;
+}
 .casedescription2 {
   font-size: 20px;
   font-weight: 500;

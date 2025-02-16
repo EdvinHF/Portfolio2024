@@ -601,6 +601,7 @@ a {
   font-weight: 600;
   letter-spacing: 1px;
   line-height: 140%;
+  text-decoration: underline;
 }
 .selected-headline {
   padding-top: 140px;

@@ -15,9 +15,12 @@
 
       gtag("config", "G-B3V9KYR681");
     </script>
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="0">
+    <meta
+      http-equiv="Cache-Control"
+      content="no-cache, no-store, must-revalidate"
+    />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
@@ -32,7 +35,7 @@
     <title>Edvin Höglin Forsberg</title>
     <link rel="icon" type="image/x-icon" href="/images/icon1.svg" />
     <link rel="icon" href="/images/icon1.svg" />
-    <link rel="stylesheet" href="other-style.css" />
+    <link rel="stylesheet" href="case-style.css" />
     <link rel="stylesheet" href="https://use.typekit.net/cla0evs.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -50,14 +53,14 @@
       href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
       rel="stylesheet"
     />
-    <script src="other2.js" defer></script>
+    <script src="other.js" defer></script>
   </head>
   <body>
     <div class="ball" id="ball"></div>
     <div class="menu">
       <div class="top-menu">
         <span class="close-wrapper">
-          <a class="delayed-link" href="index.html" id="home-button"
+          <a href="index.html" class="delayed-link" id="home-button"
             >Edvin Höglin Forsberg</a
           >
           <a id="close-button">Close</a>
@@ -77,8 +80,10 @@
         <img id="menu-icon" src="images/hf_logga-02.svg" alt="" />
       </div>
     </div>
-
-    <div id="container-about">
+    <div class="header-image-container disapear">
+      <img class="header-image" src="images/Hans chark/hans-grain.png" alt="" />
+    </div>
+    <div id="container">
       <nav class="navigation">
         <div class="nav-left">
           <a class="delayed-link" href="index.html">Edvin Höglin Forsberg</a>
@@ -88,47 +93,66 @@
         </div>
       </nav>
       <main class="disapear">
-        <div class="content-container-about">
-          <div id="casestext">
-            <h1 id="caseheadline">Contact</h1>
-            <h2 id="headline-about">Want to get in touch?</h2>
-            <p id="contact-text1">
-              You can reach me on my mail
-              <b id="email">Edvinhoglinforberg@gmail.com</b>
-              <br />
-              or give mr a call at <b id="phone">+46 (0)73 528 91-98</b>
+        <div id="casestext">
+          <div id="left-text">
+            <h2 id="caseorg">Edvin Höglin Forsberg</h2>
+            <h1 id="caseheadline">PERSONAL BRANDING</h1>
+            <p id="casedescription">
+              As a graphic designer, I decided it would be best for my brand to
+              remain as neutral as possible, while still being unique and bold.
+              This approach ensures that my brand doesn’t clash with the
+              aesthetics of my projects, each of which should maintain its own
+              independent style, free from my personal aesthetic bias.
             </p>
-            <div class="buttons-container">
-              <div class="button-container">
-                <a href="mailto::Edvinhoglinforberg@gmail.com">
-                  <button class="button-cases">
-                    Send me mail
-                    <div class="whitearrow"></div>
-                  </button>
-                </a>
-              </div>
-              <div class="button-container">
-                <a href="tel:+46 735289198">
-                  <button class="button-cases">
-                    Give me a call
-                    <div class="whitearrow"></div>
-                  </button>
-                </a>
-              </div>
+          </div>
+          <div id="right-text">
+            <ul id="keywords">
+              <li>Graphic Design</li>
+              <li>Motion Graphics</li>
+              <li>Web Development</li>
+              <li>UI/UX Design</li>
+            </ul>
+          </div>
+        </div>
+        <div class="selected-wrapper">
+          <div class="herocard" id="herocard1">
+            <div class="thumbnail">
+              <video
+                class="thumbnail-img"
+                autoplay=""
+                playsinline=""
+                muted=""
+                loop=""
+                preload="metadata"
+                poster=""
+                src="images/Hans chark/HansChark.mp4"
+              ></video>
             </div>
           </div>
-
-          <div class="image-container">
-            <video
-              class="fire"
-              autoplay=""
-              playsinline=""
-              muted=""
-              loop=""
-              preload="metadata"
-              poster=""
-              src="images/fire.mp4"
-            ></video>
+          <div class="herocard" id="herocard1">
+            <div class="thumbnail2x">
+              <img
+                class="thumbnail-img"
+                src="images/Hans chark/halv1.png"
+                alt=""
+              />
+            </div>
+            <div class="thumbnail2x">
+              <img
+                class="thumbnail-img"
+                src="images/Hans chark/halv2.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="herocard" id="herocard1">
+            <div class="thumbnail">
+              <img
+                class="thumbnail-img"
+                src="images/Hans chark/hus.png"
+                alt=""
+              />
+            </div>
           </div>
         </div>
       </main>
@@ -162,6 +186,5 @@
         </div>
       </div>
     </footer>
-    </div>
   </body>
 </html>
