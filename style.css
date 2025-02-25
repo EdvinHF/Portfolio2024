@@ -1035,4 +1035,16 @@ a {
     padding-right: 30px;
     height: fit-content;
   }
+  .navigation {
+    padding: 15px;
+  }
+  #heroland {
+    padding-left: 15px;
+  }
+  #selectedprojects {
+    padding: 15px;
+  }
+  .footer {
+    padding: 15px;
+  }
 }

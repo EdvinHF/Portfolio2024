@@ -1127,4 +1127,16 @@ li {
   #about-text1 {
     font-size: 18px;
   }
+  #container {
+    padding: 15px;
+  }
+  .footer {
+    padding: 15px;
+  }
+  .navigation {
+    padding: 15px;
+  }
+  #container-about {
+    padding: 15px;
+  }
 }
