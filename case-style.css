@@ -26,6 +26,9 @@ body {
 main {
   height: 100%;
 }
+.play-video {
+  width: 100%;
+}
 /*
   .ball {
     position: absolute;
