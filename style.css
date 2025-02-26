@@ -18,7 +18,6 @@ html {
   opacity: 0;
 }
 
-/*
 .ball {
   position: absolute;
   width: 25px;
@@ -27,7 +26,7 @@ html {
   border-radius: 50%;
   transition: transform 0.05s ease-out;
   pointer-events: none;
-  z-index: 20000;
+  z-index: 9998;
   opacity: 0;
   animation: blinkk2reverse 0.5s ease-in forwards;
 }
@@ -65,7 +64,7 @@ html {
     filter: blur(0);
   }
 }
-  */
+
 .menu {
   z-index: 1001;
   top: 0;

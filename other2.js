@@ -7,48 +7,46 @@ document.addEventListener("DOMContentLoaded", () => {
   const links = document.querySelectorAll("a.delayed-link");
   let contents = document.querySelectorAll(".disapear");
 
-  /*
-    const ball = document.getElementById("ball");
-    let mouseX = 0;
-    let mouseY = 0;
-  
-    function updateBallPosition() {
-      const x = mouseX - ball.offsetWidth / 2;
-      const y = mouseY - ball.offsetHeight / 2;
-      ball.style.transform = `translate(${x}px, ${y}px)`;
-    }
-  
-    function updateBallPosition() {
-      const scrollX = window.pageXOffset;
-      const scrollY = window.pageYOffset;
-      const x = mouseX - ball.offsetWidth / 2 + scrollX;
-      const y = mouseY - ball.offsetHeight / 2 + scrollY;
-      ball.style.transform = `translate(${x}px, ${y}px)`;
-    }
-  
-    document.addEventListener("mousemove", (e) => {
-      ball.style.opacity = 1;
-      mouseX = e.clientX;
-      mouseY = e.clientY;
-      updateBallPosition();
+  const ball = document.getElementById("ball");
+  let mouseX = 0;
+  let mouseY = 0;
+
+  function updateBallPosition() {
+    const x = mouseX - ball.offsetWidth / 2;
+    const y = mouseY - ball.offsetHeight / 2;
+    ball.style.transform = `translate(${x}px, ${y}px)`;
+  }
+
+  function updateBallPosition() {
+    const scrollX = window.pageXOffset;
+    const scrollY = window.pageYOffset;
+    const x = mouseX - ball.offsetWidth / 2 + scrollX;
+    const y = mouseY - ball.offsetHeight / 2 + scrollY;
+    ball.style.transform = `translate(${x}px, ${y}px)`;
+  }
+
+  document.addEventListener("mousemove", (e) => {
+    ball.style.opacity = 1;
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+    updateBallPosition();
+  });
+  document.addEventListener("mouseleave", () => {
+    ball.style.opacity = 0;
+  });
+
+  document.querySelectorAll("a, button").forEach((element) => {
+    element.addEventListener("mouseenter", () => {
+      ball.classList.add("large"); // Make ball bigger
     });
-    document.addEventListener("mouseleave", () => {
-      ball.style.opacity = 0;
+
+    element.addEventListener("mouseleave", () => {
+      ball.classList.remove("large"); // Restore ball size
     });
-  
-    document.querySelectorAll("a, button").forEach((element) => {
-      element.addEventListener("mouseenter", () => {
-        ball.classList.add("large"); // Make ball bigger
-      });
-  
-      element.addEventListener("mouseleave", () => {
-        ball.classList.remove("large"); // Restore ball size
-      });
-    });
-  
-    window.addEventListener("scroll", updateBallPosition);
-  
-    */
+  });
+
+  window.addEventListener("scroll", updateBallPosition);
+
   window.addEventListener("pageshow", function (event) {
     var historyTraversal =
       event.persisted ||

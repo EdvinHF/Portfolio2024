@@ -15,7 +15,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const plus2 = document.querySelector(".plus2");
   let designOpen2 = false;
 
-  /*
   const ball = document.getElementById("ball");
   let mouseX = 0;
   let mouseY = 0;
@@ -56,7 +55,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   window.addEventListener("scroll", updateBallPosition);
 
-  */
   window.addEventListener("pageshow", function (event) {
     var historyTraversal =
       event.persisted ||

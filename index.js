@@ -19,7 +19,6 @@ document.addEventListener("DOMContentLoaded", () => {
   let mouseX = 0;
   let mouseY = 0;*/
 
-  /*
   function isTouchDevice() {
     return "ontouchstart" in window || navigator.maxTouchPoints > 0;
   }
@@ -64,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     window.addEventListener("scroll", updateBallPosition);
   }
-    */
+
   window.addEventListener("pageshow", function (event) {
     var historyTraversal =
       event.persisted ||

@@ -20,7 +20,7 @@ html {
 main {
   height: 100%;
 }
-/*
+
 .ball {
   position: absolute;
   width: 25px;
@@ -36,7 +36,6 @@ main {
 .large.ball {
   animation: blinkk2 1s ease-in forwards;
 }
-
 
 @keyframes blinkk2 {
   0% {
@@ -67,7 +66,6 @@ main {
   }
 }
 
-*/
 .menu {
   z-index: 1001;
   top: 0;

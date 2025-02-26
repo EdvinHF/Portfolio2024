@@ -29,54 +29,52 @@ main {
 .play-video {
   width: 100%;
 }
-/*
-  .ball {
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    background-color: #3064ce;
-    border-radius: 50%;
-    transition: transform 0.05s ease-out;
-    pointer-events: none;
-    z-index: 20000;
-    opacity: 0;
-    animation: blinkk2reverse 1s ease-in forwards;
+
+.ball {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background-color: #3064ce;
+  border-radius: 50%;
+  transition: transform 0.05s ease-out;
+  pointer-events: none;
+  z-index: 20000;
+  opacity: 0;
+  animation: blinkk2reverse 1s ease-in forwards;
+}
+.large.ball {
+  animation: blinkk2 1s ease-in forwards;
+}
+
+@keyframes blinkk2 {
+  0% {
+    opacity: 100%;
+    filter: blur(0);
   }
-  .large.ball {
-    animation: blinkk2 1s ease-in forwards;
+  50% {
+    opacity: 40%;
+    filter: blur(1px);
   }
-  
-  
-  @keyframes blinkk2 {
-    0% {
-      opacity: 100%;
-      filter: blur(0);
-    }
-    50% {
-      opacity: 40%;
-      filter: blur(1px);
-    }
-    100% {
-      opacity: 85%;
-      filter: blur(20px);
-    }
+  100% {
+    opacity: 85%;
+    filter: blur(20px);
   }
-  @keyframes blinkk2reverse {
-    0% {
-      opacity: 85%;
-      filter: blur(50px);
-    }
-    50% {
-      opacity: 40%;
-      filter: blur(1px);
-    }
-    100% {
-      opacity: 100%;
-      filter: blur(0);
-    }
+}
+@keyframes blinkk2reverse {
+  0% {
+    opacity: 85%;
+    filter: blur(50px);
   }
-  
-  */
+  50% {
+    opacity: 40%;
+    filter: blur(1px);
+  }
+  100% {
+    opacity: 100%;
+    filter: blur(0);
+  }
+}
+
 .menu {
   z-index: 1001;
   top: 0;
