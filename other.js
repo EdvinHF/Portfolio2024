@@ -15,47 +15,52 @@ document.addEventListener("DOMContentLoaded", () => {
   const plus2 = document.querySelector(".plus2");
   let designOpen2 = false;
 
-  const ball = document.getElementById("ball");
-  let mouseX = 0;
-  let mouseY = 0;
-
-  function updateBallPosition() {
-    const x = mouseX - ball.offsetWidth / 2;
-    const y = mouseY - ball.offsetHeight / 2;
-    ball.style.transform = `translate(${x}px, ${y}px)`;
+  function isTouchDevice() {
+    return "ontouchstart" in window || navigator.maxTouchPoints > 0;
   }
 
-  function updateBallPosition() {
-    const scrollX = window.pageXOffset;
-    const scrollY = window.pageYOffset;
-    const x = mouseX - ball.offsetWidth / 2 + scrollX;
-    const y = mouseY - ball.offsetHeight / 2 + scrollY;
-    ball.style.transform = `translate(${x}px, ${y}px)`;
-  }
+  // If it's a touch device, hide the ball
+  if (isTouchDevice()) {
+    ball.classList.add("hidden"); // Add the class to hide the ball
+  } else {
+    function updateBallPosition() {
+      const x = mouseX - ball.offsetWidth / 2;
+      const y = mouseY - ball.offsetHeight / 2;
+      ball.style.transform = `translate(${x}px, ${y}px)`;
+    }
 
-  document.addEventListener("mousemove", (e) => {
-    ball.style.opacity = 1;
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-    updateBallPosition();
-  });
-  document.addEventListener("mouseleave", () => {
-    ball.style.opacity = 0;
-  });
+    function updateBallPosition() {
+      const scrollX = window.pageXOffset;
+      const scrollY = window.pageYOffset;
+      const x = mouseX - ball.offsetWidth / 2 + scrollX;
+      const y = mouseY - ball.offsetHeight / 2 + scrollY;
+      ball.style.transform = `translate(${x}px, ${y}px)`;
+    }
 
-  document
-    .querySelectorAll("a, button, .fields-header, .fields-header2")
-    .forEach((element) => {
-      element.addEventListener("mouseenter", () => {
-        ball.classList.add("large"); // Make ball bigger
-      });
-
-      element.addEventListener("mouseleave", () => {
-        ball.classList.remove("large"); // Restore ball size
-      });
+    document.addEventListener("mousemove", (e) => {
+      ball.style.opacity = 1;
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+      updateBallPosition();
+    });
+    document.addEventListener("mouseleave", () => {
+      ball.style.opacity = 0;
     });
 
-  window.addEventListener("scroll", updateBallPosition);
+    document
+      .querySelectorAll("a, button, .fields-container , .fields-container2")
+      .forEach((element) => {
+        element.addEventListener("mouseenter", () => {
+          ball.classList.add("large"); // Make ball bigger
+        });
+
+        element.addEventListener("mouseleave", () => {
+          ball.classList.remove("large"); // Restore ball size
+        });
+      });
+
+    window.addEventListener("scroll", updateBallPosition);
+  }
 
   window.addEventListener("pageshow", function (event) {
     var historyTraversal =
