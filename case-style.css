@@ -878,7 +878,9 @@ a {
     font-size: 18px;
   }
   #container {
-    padding: 15px;
+    padding-top: 30vh;
+    padding-right: 15px;
+    padding-left: 15px;
   }
   .footer {
     padding: 15px;
