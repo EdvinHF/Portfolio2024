@@ -327,8 +327,6 @@ a {
   padding-left: 80px;
   justify-content: center;
   flex-direction: column-reverse;
-
-  gap: 27vh;
   z-index: 100;
 }
 
@@ -337,6 +335,10 @@ a {
   flex-direction: column;
   width: fit-content;
   line-height: 250%;
+  height: 50%;
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 60px;
 }
 .word {
   font-size: 25px;
@@ -347,8 +349,8 @@ a {
   width: 100%;
   display: flex;
   justify-content: flex-start;
-  align-items: flex-start;
-  padding-top: 35vh;
+  align-items: flex-end;
+  height: 50%;
 }
 #name {
   font-size: 55px;
@@ -927,6 +929,9 @@ a {
     transform: translateX(100vw);
     padding: 30px;
   }
+  #word-container {
+    padding-bottom: 30px;
+  }
   .menu-links h3 {
     font-size: 11vw;
   }
@@ -961,7 +966,6 @@ a {
   }
   #heroland {
     padding-left: 30px;
-    gap: 36vh;
   }
   #selectedprojects {
     padding-left: 30px;
@@ -1055,5 +1059,8 @@ a {
   }
   .footer {
     padding: 15px;
+  }
+  #word-container {
+    padding-bottom: 15px;
   }
 }
