@@ -43,15 +43,17 @@ document.addEventListener("DOMContentLoaded", () => {
     ball.style.opacity = 0;
   });
 
-  document.querySelectorAll("a, button").forEach((element) => {
-    element.addEventListener("mouseenter", () => {
-      ball.classList.add("large"); // Make ball bigger
-    });
+  document
+    .querySelectorAll("a, button, .fields-header, .fields-header2")
+    .forEach((element) => {
+      element.addEventListener("mouseenter", () => {
+        ball.classList.add("large"); // Make ball bigger
+      });
 
-    element.addEventListener("mouseleave", () => {
-      ball.classList.remove("large"); // Restore ball size
+      element.addEventListener("mouseleave", () => {
+        ball.classList.remove("large"); // Restore ball size
+      });
     });
-  });
 
   window.addEventListener("scroll", updateBallPosition);
 
