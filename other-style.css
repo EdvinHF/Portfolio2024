@@ -36,6 +36,9 @@ main {
 .large.ball {
   animation: blinkk2 0.5s ease-in forwards;
 }
+.hidden.ball {
+  display: none;
+}
 
 @keyframes blinkk2 {
   0% {
