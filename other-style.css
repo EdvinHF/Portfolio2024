@@ -277,8 +277,8 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: moveup2b;
-  animation-duration: 2s;
+  animation: moveup3;
+  animation-duration: 1s;
   animation-timing-function: ease-out;
 }
 .fire {
