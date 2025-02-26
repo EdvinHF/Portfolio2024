@@ -40,10 +40,10 @@ main {
   pointer-events: none;
   z-index: 20000;
   opacity: 0;
-  animation: blinkk2reverse 1s ease-in forwards;
+  animation: blinkk2reverse 0.5s ease-in forwards;
 }
 .large.ball {
-  animation: blinkk2 1s ease-in forwards;
+  animation: blinkk2 0.5s ease-in forwards;
 }
 
 @keyframes blinkk2 {
