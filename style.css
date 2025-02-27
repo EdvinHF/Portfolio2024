@@ -3,13 +3,13 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "neue-haas-grotesk-display", sans-serif;
-
   font-size: 15px;
   font-weight: 600;
 }
 html {
   background: #f0f0f0;
 }
+
 .disapear {
   opacity: 1;
   transition: opacity 0.3s ease-in-out;
@@ -171,7 +171,6 @@ html {
 .menu-links {
   display: flex;
   flex-direction: column;
-
   font-weight: 600;
   color: #232323;
   gap: 5px;
@@ -514,7 +513,7 @@ a {
   padding-right: 80px;
   justify-content: flex-start;
   align-items: center;
-  background-color: #fdfdfd;
+  background-color: #f4f4f4;
   height: fit-content;
   padding-bottom: 150px;
 }

@@ -31,6 +31,7 @@ main {
   pointer-events: none;
   z-index: 20000;
   opacity: 0;
+
   animation: blinkk2reverse 0.5s ease-in forwards;
 }
 .large.ball {
@@ -744,7 +745,7 @@ li {
   height: 33vh;
   align-items: flex-start;
   padding-top: 75px;
-  background-color: #ffffff;
+  background-color: #f4f4f4;
   margin-top: 70px;
   padding-left: 80px;
   padding-right: 80px;
