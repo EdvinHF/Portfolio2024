@@ -10,6 +10,9 @@ html {
   background: #f0f0f0;
   height: 100%;
 }
+body {
+  overflow-x: hidden;
+}
 .disapear {
   opacity: 1;
   transition: opacity 0.3s ease-in-out;
