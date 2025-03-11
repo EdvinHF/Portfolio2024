@@ -184,6 +184,7 @@ main {
   gap: 5px;
   padding-top: 130px;
 }
+
 .bottom-menu {
   display: flex;
   justify-content: space-between;
