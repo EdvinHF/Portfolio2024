@@ -72,6 +72,20 @@ main {
     filter: blur(0);
   }
 }
+@keyframes blinkk3 {
+  0% {
+    opacity: 100%;
+    filter: blur(0);
+  }
+  50% {
+    opacity: 40%;
+    filter: blur(2px);
+  }
+  100% {
+    opacity: 85%;
+    filter: blur(0px);
+  }
+}
 
 .menu {
   z-index: 1001;
@@ -183,6 +197,9 @@ main {
   color: #232323;
   gap: 5px;
   padding-top: 130px;
+}
+.menu-links a h3:hover {
+  animation: blinkk3 1s ease-in-out forwards;
 }
 
 .bottom-menu {
