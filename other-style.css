@@ -9,6 +9,7 @@
 html {
   background: #f0f0f0;
   height: 100%;
+  scroll-behavior: smooth;
 }
 body {
   overflow-x: hidden;
@@ -70,20 +71,6 @@ main {
   100% {
     opacity: 100%;
     filter: blur(0);
-  }
-}
-@keyframes blinkk3 {
-  0% {
-    opacity: 100%;
-    filter: blur(0);
-  }
-  50% {
-    opacity: 40%;
-    filter: blur(2px);
-  }
-  100% {
-    opacity: 85%;
-    filter: blur(0px);
   }
 }
 
@@ -183,25 +170,92 @@ main {
 #home-button {
   display: none;
 }
+/*nytt->*/
 .menu-links h3 {
   font-size: 3.5vw;
   font-weight: 600;
   color: #232323;
   cursor: pointer;
 }
+.top-menu {
+  clip-path: margin-box;
+}
+
+.link-line {
+  display: flex;
+  align-items: center;
+}
 .menu-links {
   display: flex;
   flex-direction: column;
-
   font-weight: 600;
   color: #232323;
   gap: 5px;
-  padding-top: 130px;
-}
-.menu-links a h3:hover {
-  animation: blinkk3 1s ease-in-out forwards;
+  margin-top: 130px;
 }
 
+.menu-links a .link-line {
+  transform: translateX(0);
+  transition: transform 0.5s cubic-bezier(0.71, 0, 0.17, 1);
+  display: flex;
+  flex-direction: row;
+}
+
+.menu-links a .link-line:hover {
+  transform: translateX(2vw);
+  animation: blinkk3 0.6s cubic-bezier(0.71, 0, 0.17, 1) forwards;
+}
+.menu-links a .static-link-line:hover {
+  transform: translateX(2vw);
+  animation: blinkk3 0.6s cubic-bezier(0.71, 0, 0.17, 1) forwards;
+}
+@keyframes blinkk3 {
+  10% {
+    opacity: 75%;
+  }
+  100% {
+    opacity: 95%;
+  }
+}
+.big-arrow {
+  width: 2vw;
+  height: 0.3vw;
+  background-color: #232323;
+  position: relative;
+  left: -2.2vw;
+  position: absolute;
+}
+.static-link-line {
+  display: flex;
+  align-items: center;
+  transform: translateX(2vw);
+  transition: transform 0.5s cubic-bezier(0.71, 0, 0.17, 1);
+}
+
+.menu-links:hover .static-link-line {
+  transform: translateX(0);
+}
+
+.static-arrow {
+  width: 2vw;
+  height: 0.3vw;
+  background-color: #232323;
+  position: relative;
+  left: -2.2vw;
+  position: absolute;
+}
+.menu-links a h3 .big-arrow {
+  opacity: 0;
+  transform: translateX(-5px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.menu-links a h3:hover .big-arrow {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/*<-*/
 .bottom-menu {
   display: flex;
   justify-content: space-between;
@@ -535,7 +589,7 @@ li {
   display: grid;
   grid-template-columns: repeat(2, minmax(50px, 1000px));
   column-gap: 2%;
-  row-gap: 5vw;
+  row-gap: 60px;
   justify-content: center;
   padding-top: 40px;
   background-color: none;
@@ -675,25 +729,27 @@ li {
   transition: transform 0.5s;
 }
 .herocard:hover .thumbnail-img {
-  transform: scale(1.1);
+  transform: scale(1.03);
   overflow: hidden;
   animation: blinkk 1s ease-out forwards;
 }
+/*nytt->*/
 @keyframes blinkk {
   50% {
-    opacity: 40%;
+    opacity: 75%;
   }
   100% {
-    opacity: 85%;
+    opacity: 95%;
   }
 }
+/*<-*/
 .card-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   background-color: none;
   height: 8%;
-  row-gap: 1.5vw;
+  row-gap: 15px;
 }
 .info {
   width: 100%;
@@ -723,6 +779,8 @@ li {
   align-items: center;
   gap: 4px;
 }
+
+/*nytt->*/
 .small-arrow {
   width: 30px;
   height: 3px;
@@ -739,7 +797,8 @@ li {
   height: 3px;
   background-color: #232323;
   opacity: 0;
-  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+  transition: transform 0.5s cubic-bezier(0.71, 0, 0.17, 1),
+    opacity 0.5s ease-out;
 }
 
 .herocard:hover .small-arrow {
@@ -757,8 +816,9 @@ li {
 }
 
 .herocard:not(:hover) .small-arrow {
-  animation: arrowMoveLeft 0.8s ease-out forwards;
+  animation: arrowMoveLeft 0.8s cubic-bezier(0.71, 0, 0.17, 1) forwards;
 }
+/*<-*/
 
 .footer {
   display: flex;
@@ -1001,7 +1061,25 @@ li {
   .menu-links h3 {
     font-size: 11vw;
   }
+  /*nytt->*/
+  .menu-links a .link-line:hover,
+  .menu-links a .static-link-line:hover,
+  .menu-links:hover .static-link-line,
+  .menu-links a h3:hover .big-arrow {
+    transform: none !important;
+    animation: none !important;
+    opacity: 1 !important;
+  }
+  .static-link-line {
+    transform: translateX(6vw);
+  }
 
+  .static-arrow {
+    width: 4vw;
+    height: 1vw;
+    left: -4.8vw;
+  }
+  /*<-*/
   @keyframes menu-open {
     0% {
       transform: translateX(100vw);
