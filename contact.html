@@ -101,56 +101,41 @@
         <div class="content-container-about">
           <div id="casestext">
             <h1 id="caseheadline">Contact</h1>
-            <h2 id="headline-about">Want to get in touch?</h2>
+            <h2 id="headline-about">Need a designer who brings fresh ideas? <br>Let’s talk.</h2>
             <p id="contact-text1">
-              You can reach me on my mail
-              <b id="email">Edvinhoglinforberg@gmail.com</b>
-              <br />
-              or give mr a call at <b id="phone">+46 (0)73 528 91-98</b>
+              <b id="email"><img id="menu-icon" src="images/Message.svg" alt="email icon" />Edvinhoglinforberg@gmail.com</b>
+              <b id="phone"><img id="menu-icon" src="images/Phone.svg" alt="email icon" />+46 (0)73 528 91-98</b>
             </p>
-            <div class="buttons-container">
-              <div class="button-container">
-                <a href="mailto::Edvinhoglinforberg@gmail.com">
-                  <button class="button-cases">
-                    Send me mail
-                    <div class="whitearrow"></div>
-                  </button>
-                </a>
-              </div>
-              <div class="button-container">
-                <a href="tel:+46 735289198">
-                  <button class="button-cases">
-                    Give me a call
-                    <div class="whitearrow"></div>
-                  </button>
-                </a>
-              </div>
-            </div>
+           
           </div>
 
-          <div class="image-container">
-            <video
-              class="fire"
-              autoplay=""
-              playsinline=""
-              muted=""
-              loop=""
-              preload="metadata"
-              poster=""
-              alt="HF logo morph animation"
-              src="images/fire.mp4"
-            ></video>
-          </div>
+         <div class="form-container">
+          <form id="email-form" action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="0f406444-5c8a-4f82-91bc-83b392e36bd0">
+            <!-- Form Inputs. Each input must have a name="" attribute -->
+             <p class="form-header" >Name</p>
+            <input class="input-info" type="text" name="name" placeholder="" required>
+            <p class="form-header">Email</p>
+            <input class="input-info" type="email" name="email" placeholder="" required>
+            <p class="form-header">Your Message</p>
+            <textarea class="input-message" name="message" placeholder="" required></textarea>
+            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+            <input type="hidden" name="redirect" value="https://edvinhf.xyz/contact.html">
+             <div class="button-container">
+            <button class="button-cases" type="submit">Send Message <div class="whitearrow"></div></button>
+            
+            </div>
+          </form>
+         </div>
         </div>
       </main>
     </div>
     <footer class="footer disapear">
       <div class="left-center">
         <div class="left-footer">
-          <h3 class="footer-name">Edvin Höglin Forsberg</h3>
-          <p class="left-paragraph">
-            Let’s Create Something <br />Remarkable Together ツ
-          </p>
+          <h3 class="footer-name">Visual Design Portfolio — <br>
+            By Edvin Höglin Forsberg</h3>
+          
         </div>
         <div class="center-footer">
           <a class="delayed-link" href="cases.html"><h2>Case</h2></a>
@@ -169,6 +154,10 @@
         </div>
       </div>
     </footer>
+    <!-- <div class="bottom-footer" >
+      <img class="bottom-icon" src="images/hf_logga-03.svg" alt="hf logo">
+      <div class="bottom-footer-text" ><p>© Edvin Höglin Forsberg - 2024</p></div>
+    </div> -->
     </div>
   </body>
 </html>
