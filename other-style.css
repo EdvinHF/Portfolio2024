@@ -403,6 +403,7 @@ a {
   border-color: #232323;
   color: #232323c2;
   background-color: #f4f4f4;
+  resize: vertical;
 }
 
 #me {
@@ -874,7 +875,6 @@ li {
 .footer {
   display: flex;
   justify-content: space-between;
-
   align-items: flex-start;
   padding-top: 75px;
   padding-bottom: 70px;
@@ -1087,6 +1087,8 @@ li {
 .bottom-icon {
   width: 65px;
   height: auto;
+}
+.bottom-footer-text {
 }
 
 @media (max-width: 1300px) {
