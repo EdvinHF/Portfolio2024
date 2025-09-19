@@ -159,6 +159,12 @@ html {
 #close-button {
   cursor: pointer;
 }
+#close-button:hover {
+  animation: opacity-animation 0.5s ease-out forwards;
+}
+.nav-right:hover {
+  animation: opacity-animation 0.5s ease-out forwards;
+}
 #home-button {
   display: none;
 }
@@ -946,6 +952,11 @@ a {
   font-weight: 600;
   color: #232323;
 }
+.copyright-text {
+  font-weight: 500;
+  font-size: 14px;
+  padding-top: 13px;
+}
 .left-paragraph {
   color: #232323;
   font-weight: 500;
@@ -960,6 +971,17 @@ a {
   flex-direction: column;
   gap: 8px;
   margin-left: 20px;
+}
+.center-footer a:hover {
+  animation: opacity-animation 1s cubic-bezier(0.71, 0, 0.17, 1) forwards;
+}
+@keyframes opacity-animation {
+  50% {
+    opacity: 50%;
+  }
+  100% {
+    opacity: 90%;
+  }
 }
 .right-footer {
   display: flex;

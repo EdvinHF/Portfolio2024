@@ -9,10 +9,9 @@
 html {
   background: #f0f0f0;
   height: 100%;
-}
-body {
   overflow-x: hidden;
 }
+
 .disapear {
   opacity: 1;
   transition: opacity 0.3s ease-in-out;
@@ -165,6 +164,12 @@ main {
 }
 #close-button {
   cursor: pointer;
+}
+#close-button:hover {
+  animation: opacity-animation 0.5s ease-out forwards;
+}
+.nav-right:hover {
+  animation: opacity-animation 0.5s ease-out forwards;
 }
 #home-button {
   display: none;
@@ -583,6 +588,23 @@ li {
   position: relative;
   transition: transform 0.2s ease-out;
 }
+.fields-header:hover .plus {
+  transform: rotate(90deg);
+  transition: transform 0.5s cubic-bezier(0.71, 0, 0.17, 1);
+}
+.fields-header:hover .close-button {
+  transform: rotate(135deg);
+  transition: transform 0.5s cubic-bezier(0.71, 0, 0.17, 1);
+}
+
+.fields-header2:hover .plus2 {
+  transform: rotate(90deg);
+  transition: transform 0.5s cubic-bezier(0.71, 0, 0.17, 1);
+}
+.fields-header2:hover .close-button {
+  transform: rotate(135deg);
+  transition: transform 0.5s cubic-bezier(0.71, 0, 0.17, 1);
+}
 
 .plus::before,
 .plus::after {
@@ -901,6 +923,11 @@ li {
   font-weight: 600;
   color: #232323;
 }
+.copyright-text {
+  font-weight: 500;
+  font-size: 14px;
+  padding-top: 13px;
+}
 .left-paragraph {
   color: #232323;
   font-weight: 500;
@@ -914,6 +941,17 @@ li {
   display: flex;
   flex-direction: column;
   gap: 8px;
+}
+.center-footer a:hover {
+  animation: opacity-animation 1s cubic-bezier(0.71, 0, 0.17, 1) forwards;
+}
+@keyframes opacity-animation {
+  50% {
+    opacity: 50%;
+  }
+  100% {
+    opacity: 90%;
+  }
 }
 .right-footer {
   display: flex;
