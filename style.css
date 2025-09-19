@@ -262,6 +262,19 @@ html {
   align-items: flex-end;
   line-height: -5px;
 }
+.menu-socials {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 30px;
+}
+.menu-socials a {
+  font-size: 15px;
+  font-weight: 500;
+  padding-top: 7px;
+}
+.menu-socials a:hover {
+  animation: opacity-animation 1s cubic-bezier(0.71, 0, 0.17, 1) forwards;
+}
 .bottom-menu p {
   font-size: 14px;
   font-weight: 500;
