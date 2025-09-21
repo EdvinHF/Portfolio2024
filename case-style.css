@@ -2,9 +2,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "neue-haas-grotesk-display", sans-serif;
+  font-family: "Hanken Grotesk", sans-serif;
   font-size: 15px;
-  font-weight: 600;
+  font-weight: 700;
+  font-kerning: normal;
 }
 html {
   background: #f0f0f0;
@@ -306,7 +307,8 @@ main {
   font-size: 9pt;
   font-weight: 100;
   background-color: #f0f0f050;
-  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  transition: transform 0.3s cubic-bezier(0.71, 0, 0.17, 1),
+    opacity 0.6s ease-in-out;
   transform: translateY(0);
   z-index: 1000;
   backdrop-filter: blur(2px);
@@ -582,7 +584,7 @@ a {
 }
 .copyright-text {
   font-weight: 500;
-  font-size: 14px;
+  font-size: 15px;
   padding-top: 13px;
 }
 .left-paragraph {

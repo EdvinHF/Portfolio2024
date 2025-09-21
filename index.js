@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const mainContent = document.getElementById("container");
   const introVideo = document.getElementById("intro-video");
   const navigation = document.querySelector(".navigation");
-  const indexDescription = document.querySelector("#index-description");
+  const indexHeadline = document.querySelectorAll(".index-headline");
   const h21 = document.querySelector(".h21");
   const h22 = document.querySelector(".h22");
   const h23 = document.querySelector(".h23");
@@ -129,9 +129,15 @@ document.addEventListener("DOMContentLoaded", () => {
       isHidden = false;
     }
 
-    if (isHalfElementInViewport(indexDescription)) {
-      indexDescription.classList.add("scrolled");
-    }
+    indexHeadline.forEach((headline) => {
+      if (
+        isHalfElementInViewport(headline) &&
+        !headline.classList.contains("scrolled")
+      ) {
+        headline.classList.add("scrolled");
+        console.log("hello", headline.textContent);
+      }
+    });
     if (isHalfElementInViewport(h21) && !h21.classList.contains("scrolled")) {
       h21.classList.add("scrolled");
 
