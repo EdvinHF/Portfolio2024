@@ -165,6 +165,7 @@ main {
 }
 #close-button {
   cursor: pointer;
+  font-weight: 800;
 }
 #close-button:hover {
   animation: opacity-animation 0.5s ease-out forwards;
@@ -177,10 +178,11 @@ main {
 }
 /*nytt->*/
 .menu-links h3 {
-  font-size: 3.5vw;
-  font-weight: 600;
+  font-size: 3.8vw;
+  font-weight: 700;
   color: #232323;
   cursor: pointer;
+  margin-top: -0.6vw;
 }
 .top-menu {
   clip-path: margin-box;
@@ -195,7 +197,6 @@ main {
   flex-direction: column;
   font-weight: 600;
   color: #232323;
-  gap: 5px;
   margin-top: 130px;
 }
 
@@ -277,9 +278,17 @@ main {
   font-size: 15px;
   font-weight: 500;
   padding-top: 7px;
+  color: #232323;
 }
 .menu-socials a:hover {
   animation: opacity-animation 1s cubic-bezier(0.71, 0, 0.17, 1) forwards;
+}
+
+.bottom-menu p {
+  font-weight: 500;
+  font-size: 15px;
+  padding-top: 18px;
+  color: #232323;
 }
 
 .bottom-menu p {
@@ -310,6 +319,12 @@ main {
   z-index: 1000;
   backdrop-filter: blur(2px);
 }
+.nav-left a,
+.nav-right a {
+  font-weight: 800;
+  font-size: 15px;
+}
+
 .navigation.hide {
   transform: translateY(-100%);
   opacity: 0;
@@ -436,17 +451,19 @@ a {
 
 #headline-about {
   width: 650px;
-  font-size: 60px;
+  font-weight: 800;
+  font-size: 70px;
   color: #232323;
   animation: moveup3;
   animation-duration: 1s;
   animation-timing-function: ease-out;
+  letter-spacing: -0.03em;
+  line-height: 100%;
 }
+
 #about-text1 {
-  font-size: 20px;
-  font-weight: 500;
-  letter-spacing: 1px;
-  line-height: 140%;
+  font-size: 22px;
+  font-weight: 450;
   color: #232323;
   animation: moveup3;
   animation-duration: 1s;
@@ -491,8 +508,8 @@ a {
 #caseheadline {
   padding-top: 240px;
   padding-bottom: 80px;
-  font-size: 30px;
-  font-weight: 600;
+  font-size: 26px;
+  font-weight: 700;
   color: #232323;
   animation: moveup3;
   animation-duration: 1.3s;
@@ -531,12 +548,18 @@ a {
 }
 .design-list {
   color: #232323;
-  font-size: 2px;
+  font-size: 18px;
   font-weight: 500;
-  letter-spacing: 1px;
   display: none;
 }
-
+.design-program,
+.dev-program {
+  font-size: 19px;
+  font-weight: 550;
+}
+.dev-program {
+  padding-top: 5px;
+}
 .design-list.design-open {
   color: #232323;
   display: block;
@@ -553,7 +576,6 @@ a {
   color: #232323;
   font-size: 18px;
   font-weight: 500;
-  letter-spacing: 1px;
   display: none;
 }
 
@@ -593,9 +615,8 @@ li {
 }
 .fields-h4 {
   color: #232323;
-  font-size: 25px;
+  font-size: 27px;
   font-weight: 500;
-  letter-spacing: 1px;
 }
 
 .plus {
@@ -687,16 +708,16 @@ li {
   width: 100%;
   padding-top: 50px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   animation: moveup3;
   animation-duration: 1s;
   animation-timing-function: ease-out;
   padding-bottom: 30px;
 }
 .button-cases {
-  width: 200px;
-  font-size: 20px;
-  font-weight: 500;
+  width: fit-content;
+  font-size: 22px;
+  font-weight: 550;
   cursor: pointer;
   height: 45px;
   border-radius: 30px;
@@ -707,7 +728,8 @@ li {
   color: #dddddd;
   border-width: 0;
   gap: 5px;
-  padding-right: 10px;
+  padding-right: 35px;
+  padding-left: 30px;
 }
 .button-cases:hover {
   animation: blinkk 1s ease-out forwards;
@@ -718,6 +740,7 @@ li {
   background-color: #dddddd;
   position: relative;
   animation: arrowMoveRight 0.8s ease-out forwards;
+  margin-top: 2px;
 }
 
 .whitearrow::before,
@@ -842,28 +865,24 @@ li {
 }
 .info {
   width: 100%;
-
   display: flex;
   justify-content: space-between;
-  padding-top: 1vw;
+  padding-top: 6px;
 }
 .left-info {
   font-size: 11pt;
-  font-weight: 300;
+  font-weight: 350;
   color: #232323;
-  letter-spacing: 1px;
 }
 .right-info {
   font-size: 11pt;
-  font-weight: 300;
+  font-weight: 350;
   color: #232323;
-  letter-spacing: 1px;
 }
 .description {
-  font-size: 15pt;
-  font-weight: 450;
+  font-size: 16pt;
+  font-weight: 500;
   color: #232323;
-  letter-spacing: 1px;
   display: flex;
   align-items: center;
   gap: 4px;
@@ -876,6 +895,8 @@ li {
   background-color: #232323;
   position: relative;
   animation: arrowMoveRight 0.8s ease-out forwards;
+  margin-left: 1px;
+  margin-top: 3px;
 }
 #casestext {
   padding-right: 40px;
@@ -937,13 +958,15 @@ li {
 }
 .footer-name {
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 720;
   color: #232323;
+  letter-spacing: -0.03em;
 }
 .copyright-text {
-  font-weight: 500;
+  font-weight: 550;
   font-size: 15px;
-  padding-top: 13px;
+  padding-top: 18px;
+  color: #232323;
 }
 .left-paragraph {
   color: #232323;
@@ -952,12 +975,13 @@ li {
 }
 .center-footer h2 {
   color: #232323;
-  font-size: 25px;
+  font-size: 26px;
 }
 .center-footer {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  margin-left: 20px;
 }
 .center-footer a:hover {
   animation: opacity-animation 1s cubic-bezier(0.71, 0, 0.17, 1) forwards;
@@ -975,12 +999,6 @@ li {
   flex-direction: column;
   gap: 18px;
 }
-
-.right-paragraph {
-  color: #232323;
-  font-weight: 500;
-  font-size: 22px;
-}
 .contact-icons {
   display: flex;
   align-items: flex-end;
@@ -989,8 +1007,10 @@ li {
 }
 .contact-info h3 {
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 720;
   color: #232323;
+  letter-spacing: -0.03em;
+  padding-bottom: 5px;
 }
 .contact-info p {
   font-size: 17px;
@@ -999,7 +1019,7 @@ li {
 }
 .contact-info {
   display: flex;
-  gap: 11px;
+  gap: 10px;
   flex-direction: column;
 }
 .icons img {
@@ -1152,15 +1172,14 @@ li {
     height: auto;
   }
   #headline-about {
-    width: 600px;
     color: #232323;
   }
 }
 
 @media (max-width: 1200px) {
   #headline-about {
-    width: 450px;
-    font-size: 45px;
+    width: 550px;
+    font-size: 60px;
     color: #232323;
   }
   .content-container-about {
@@ -1281,8 +1300,8 @@ li {
   }
 
   #headline-about {
-    width: 400px;
-    font-size: 35px;
+    width: 450px;
+    font-size: 50px;
     color: #232323;
   }
 }
@@ -1314,8 +1333,9 @@ li {
 }
 @media (max-width: 600px) {
   .footer {
-    flex-direction: column;
     height: fit-content;
+    flex-direction: column-reverse;
+    gap: 50px;
   }
   .left-center {
     width: 100%;
@@ -1353,7 +1373,7 @@ li {
 
   #headline-about {
     width: 330px;
-    font-size: 28px;
+    font-size: 35px;
   }
   #about-text1 {
     font-size: 18px;

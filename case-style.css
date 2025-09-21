@@ -169,6 +169,8 @@ main {
   justify-content: flex-end;
 }
 #close-button {
+  font-weight: 800;
+  font-size: 15px;
   cursor: pointer;
 }
 #home-button {
@@ -182,10 +184,11 @@ main {
 }
 /*nytt->*/
 .menu-links h3 {
-  font-size: 3.5vw;
-  font-weight: 600;
+  font-size: 3.8vw;
+  font-weight: 700;
   color: #232323;
   cursor: pointer;
+  margin-top: -0.6vw;
 }
 .top-menu {
   clip-path: margin-box;
@@ -200,7 +203,6 @@ main {
   flex-direction: column;
   font-weight: 600;
   color: #232323;
-  gap: 5px;
   margin-top: 130px;
 }
 
@@ -281,13 +283,16 @@ main {
   font-size: 15px;
   font-weight: 500;
   padding-top: 7px;
+  color: #232323;
 }
 .menu-socials a:hover {
   animation: opacity-animation 1s cubic-bezier(0.71, 0, 0.17, 1) forwards;
 }
 .bottom-menu p {
-  font-size: 14px;
   font-weight: 500;
+  font-size: 15px;
+  padding-top: 18px;
+  color: #232323;
 }
 
 #menu-icon {
@@ -312,6 +317,11 @@ main {
   transform: translateY(0);
   z-index: 1000;
   backdrop-filter: blur(2px);
+}
+.nav-left a,
+.nav-right a {
+  font-weight: 800;
+  font-size: 15px;
 }
 .navigation.hide {
   transform: translateY(-100%);
@@ -382,6 +392,7 @@ a {
   padding-top: 30svh;
   padding-left: 80px;
   padding-right: 80px;
+  padding-bottom: 70px;
 }
 #casestext {
   width: 100%;
@@ -411,40 +422,25 @@ a {
 
 #keywords li {
   font-size: 25px;
-  font-weight: 600;
+  font-weight: 650;
   color: #232323;
 }
-/*#keywords li::after {
-  content: "";
-  display: inline-block;
-  width: 10px; 
-  height: 10px;
-  background-color: #232323;
-  transform: rotate(45deg); 
-  margin-left: 10px; 
-}*/
+
 #caseorg {
   font-size: 30px;
-  font-weight: 600;
+  font-weight: 550;
   color: #232323;
 }
 #caseheadline {
-  font-size: 50px;
+  font-size: 60px;
+  font-weight: 700;
   color: #232323;
   margin-top: 15px;
 }
 #casedescription {
-  font-size: 20px;
-  font-weight: 500;
-  letter-spacing: 1px;
-  line-height: 140%;
-  margin-top: 8px;
-}
-#casedescription {
-  font-size: 20px;
-  font-weight: 500;
-  letter-spacing: 1px;
-  line-height: 140%;
+  color: #232323;
+  font-size: 22px;
+  font-weight: 450;
   margin-top: 8px;
 }
 
@@ -452,15 +448,13 @@ a {
   text-decoration: underline;
   font-size: 20px;
   font-weight: 600;
-  letter-spacing: 1px;
   line-height: 140%;
   cursor: pointer;
 }
 .casedescription2 {
-  font-size: 20px;
-  font-weight: 500;
-  letter-spacing: 1px;
-  line-height: 140%;
+  color: #232323;
+  font-size: 22px;
+  font-weight: 450;
   margin-top: 8px;
   max-width: 800px;
   padding-top: 70px;
@@ -560,7 +554,7 @@ a {
   padding-top: 75px;
   padding-bottom: 70px;
   background-color: #f4f4f4;
-  margin-top: 70px;
+  padding-top: 70px;
   padding-left: 80px;
   padding-right: 80px;
   animation: moveup3;
@@ -579,13 +573,15 @@ a {
 }
 .footer-name {
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 720;
   color: #232323;
+  letter-spacing: -0.03em;
 }
 .copyright-text {
-  font-weight: 500;
+  font-weight: 550;
   font-size: 15px;
-  padding-top: 13px;
+  padding-top: 18px;
+  color: #232323;
 }
 .left-paragraph {
   color: #232323;
@@ -594,12 +590,13 @@ a {
 }
 .center-footer h2 {
   color: #232323;
-  font-size: 25px;
+  font-size: 26px;
 }
 .center-footer {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  margin-left: 20px;
 }
 .center-footer a:hover {
   animation: opacity-animation 1s cubic-bezier(0.71, 0, 0.17, 1) forwards;
@@ -617,12 +614,6 @@ a {
   flex-direction: column;
   gap: 18px;
 }
-
-.right-paragraph {
-  color: #232323;
-  font-weight: 500;
-  font-size: 22px;
-}
 .contact-icons {
   display: flex;
   align-items: flex-end;
@@ -631,8 +622,10 @@ a {
 }
 .contact-info h3 {
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 720;
   color: #232323;
+  letter-spacing: -0.03em;
+  padding-bottom: 5px;
 }
 .contact-info p {
   font-size: 17px;
@@ -641,7 +634,7 @@ a {
 }
 .contact-info {
   display: flex;
-  gap: 11px;
+  gap: 10px;
   flex-direction: column;
 }
 .icons img {
@@ -815,8 +808,6 @@ a {
 
   #keywords li {
     font-size: 25px;
-    font-weight: 600;
-    color: #232323;
   }
 }
 
@@ -953,8 +944,9 @@ a {
 }
 @media (max-width: 600px) {
   .footer {
-    flex-direction: column;
     height: fit-content;
+    flex-direction: column-reverse;
+    gap: 50px;
   }
   .left-center {
     width: 100%;

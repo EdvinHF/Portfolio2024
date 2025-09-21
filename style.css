@@ -154,7 +154,6 @@ html {
 .close-wrapper {
   width: 100%;
   display: flex;
-
   justify-content: flex-end;
 }
 #close-button {
@@ -466,7 +465,6 @@ a {
   animation-timing-function: ease-out;
   line-height: 110%;
   color: #232323;
-  letter-spacing: -0.02em;
 }
 .arrow-text {
   display: flex;
@@ -1030,7 +1028,6 @@ a {
   color: #232323;
   font-size: 22px;
   font-weight: 450;
-  line-height: 140%;
 }
 .decription-wrapper {
   width: 100%;
@@ -1134,7 +1131,7 @@ a {
   justify-content: space-between;
   background-color: none;
   height: 8%;
-  row-gap: 10px;
+  row-gap: 15px;
 }
 .info {
   width: 100%;
@@ -1209,7 +1206,7 @@ a {
   justify-content: flex-start;
 }
 .button-cases {
-  width: 200px;
+  width: fit-content;
   font-size: 22px;
   font-weight: 550;
   cursor: pointer;
@@ -1222,7 +1219,8 @@ a {
   color: #dddddd;
   border-width: 0;
   gap: 5px;
-  padding-right: 10px;
+  padding-right: 35px;
+  padding-left: 30px;
 }
 .button-cases:hover {
   animation: blinkk 1s ease-out forwards;
@@ -1340,7 +1338,6 @@ a {
   flex-direction: column;
   gap: 18px;
 }
-
 .contact-icons {
   display: flex;
   align-items: flex-end;
