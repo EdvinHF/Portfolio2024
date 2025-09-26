@@ -621,12 +621,14 @@ a {
     transform: translateY(50px);
     opacity: 0%;
     filter: blur(10px);
+    mix-blend-mode: color;
   }
 
   25% {
     transform: translateY(0px);
     opacity: 100%;
     filter: blur(0px);
+    mix-blend-mode: normal;
   }
 }
 @keyframes moveup2 {
@@ -1080,8 +1082,7 @@ a {
   font-size: 70px;
 }
 .read-more {
-  transition: transform 1s cubic-bezier(0.71, 0, 0.17, 1); /* add filter transition */
-
+  transition: transform 1s cubic-bezier(0.71, 0, 0.17, 1);
   transform: translateX(-400px);
 }
 
@@ -1303,7 +1304,7 @@ a {
 }
 .whitearrow {
   width: 30px;
-  height: 3px;
+  height: 3.4px;
   background-color: #dddddd;
   position: relative;
   animation: arrowMoveRight 0.8s ease-out forwards;
@@ -1315,7 +1316,7 @@ a {
   content: "";
   position: absolute;
   width: 15px;
-  height: 3px;
+  height: 3.4px;
   background-color: #dddddd;
   opacity: 0;
   transition: transform 0.5s ease-out, opacity 0.5s ease-out;
