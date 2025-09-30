@@ -1465,6 +1465,10 @@ a {
     width: 160%;
     margin-left: -330px;
   }
+  .about-link {
+    margin-top: -130px;
+    margin-bottom: -150px;
+  }
 }
 @media (max-width: 1200px) {
   .selected-wrapper {
@@ -1482,6 +1486,9 @@ a {
   }
 }
 @media (max-width: 1000px) {
+  .index-description {
+    padding-top: 70px;
+  }
   .menu {
     width: 100%;
     transform: translateX(100vw);
@@ -1492,14 +1499,6 @@ a {
   }
   .menu-links h3 {
     font-size: 11vw;
-  }
-  .menu-links a .link-line:hover,
-  .menu-links a .static-link-line:hover,
-  .menu-links:hover .static-link-line,
-  .menu-links a h3:hover .big-arrow {
-    transform: none !important;
-    animation: none !important;
-    opacity: 1 !important; /* or whatever base opacity you prefer */
   }
 
   @keyframes menu-open {
@@ -1566,6 +1565,10 @@ a {
     width: 190%;
     margin-left: -360px;
   }
+  .about-link {
+    margin-top: -150px;
+    margin-bottom: -170px;
+  }
 }
 @media (max-width: 800px) {
   #name {
@@ -1582,12 +1585,20 @@ a {
     width: 240%;
     margin-left: -460px;
   }
+  .about-link {
+    margin-top: -170px;
+    margin-bottom: -190px;
+  }
 }
 @media (max-width: 700px) {
   .index-description-headline {
     scale: 0.35;
     width: 270%;
     margin-left: -470px;
+  }
+  .about-link {
+    margin-top: -190px;
+    margin-bottom: -210px;
   }
 }
 
@@ -1606,8 +1617,37 @@ a {
     width: 280%;
     margin-left: -475px;
   }
+  .about-link {
+    margin-top: -210px;
+    margin-bottom: -270px;
+  }
+}
+@media (min-width: 550px) {
+  .small-text {
+    display: none;
+  }
 }
 @media (max-width: 550px) {
+  .selected-headline {
+    padding-top: 70px;
+  }
+  .selected-wrapper {
+    padding-top: 35px;
+  }
+  .index-description {
+    padding-top: 35px;
+  }
+  .index-description-headline {
+    display: none;
+  }
+  .small-text h3 {
+    font-size: 6.9vw;
+    color: #232323;
+  }
+  .about-link {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
   #name {
     font-size: 28px;
   }
@@ -1623,13 +1663,7 @@ a {
     font-weight: 600;
     color: #232323;
   }
-  .footer {
-    padding-top: 30px;
-    padding-bottom: 30px;
-    padding-left: 30px;
-    padding-right: 30px;
-    height: fit-content;
-  }
+
   .navigation {
     padding: 15px;
     height: 70px;
@@ -1639,9 +1673,12 @@ a {
   }
   #selectedprojects {
     padding: 15px;
+    padding-bottom: 50px;
   }
   .footer {
     padding: 15px;
+    padding-bottom: 20px;
+    padding-top: 60px;
   }
   #word-container {
     padding-bottom: 15px;

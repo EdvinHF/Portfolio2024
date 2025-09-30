@@ -897,14 +897,7 @@ a {
     font-size: 11vw;
   }
   /*nytt->*/
-  .menu-links a .link-line:hover,
-  .menu-links a .static-link-line:hover,
-  .menu-links:hover .static-link-line,
-  .menu-links a h3:hover .big-arrow {
-    transform: none !important;
-    animation: none !important;
-    opacity: 1 !important;
-  }
+
   .static-link-line {
     transform: translateX(6vw);
   }
@@ -1048,15 +1041,6 @@ a {
     font-weight: 600;
     color: #232323;
   }
-  .footer {
-    flex-direction: column;
-    gap: 10px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    padding-left: 30px;
-    padding-right: 30px;
-    height: fit-content;
-  }
 
   .contact-icons {
     justify-content: space-between;
@@ -1077,8 +1061,14 @@ a {
     padding-right: 15px;
     padding-left: 15px;
   }
+  #container {
+    padding-bottom: 0px;
+  }
   .footer {
     padding: 15px;
+    padding-bottom: 20px;
+    padding-top: 60px;
+    margin-top: 50px;
   }
   .navigation {
     padding: 15px;
