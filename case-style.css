@@ -1057,13 +1057,12 @@ a {
     font-size: 18px;
   }
   #container {
-    padding-top: 30vh;
+    padding-top: 140px;
     padding-right: 15px;
     padding-left: 15px;
-  }
-  #container {
     padding-bottom: 0px;
   }
+
   .footer {
     padding: 15px;
     padding-bottom: 20px;
